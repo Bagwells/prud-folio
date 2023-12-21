@@ -7,7 +7,32 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+
+    screens: {
+      'base': '250px',
+      'sm': '640px',
+      'md': '760px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
+
+    colors: {
+      'bgBlack':'#010101',
+      'skyblue':'#00ADB5',
+      'navBlack':'#0C0D0F',
+      'grey':'#ABB2BF',
+      'Gray':'#393E46',
+    },
+
+
     extend: {
+
+      fontFamily: {
+        'poppins':'Poppins',
+        'roboto':'Roboto',
+      },
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
