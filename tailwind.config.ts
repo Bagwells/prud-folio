@@ -23,6 +23,7 @@ const config: Config = {
       'navBlack':'#0C0D0F',
       'grey':'#ABB2BF',
       'Gray':'#393E46',
+      'light':'#EEE',
     },
 
 
@@ -31,6 +32,7 @@ const config: Config = {
       fontFamily: {
         'poppins':'Poppins',
         'roboto':'Roboto',
+        'fira': ['Fira Code', 'monospace'],
       },
 
       backgroundImage: {
