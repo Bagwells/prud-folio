@@ -1,35 +1,48 @@
+'use client'
 import { HiOutlineDownload } from "react-icons/hi"
+import Footer from "@/components/Footer";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 
 const AboutPage = ()=> {
+    
+    const [ design , setDesign ] = useState(false)
+
+    useEffect(()=>{
+        setDesign(true)
+    })
+
+    const dynamicDesign = design? "-translate-y-80" : ""
 
     return (
         <>
-            <div className="flex w-full bg-bgBlack px-[120px] py-12">
+            <div className="flex w-full bg-bgBlack px-[120px] pt-12 pb-14  overflow-hidden">
                 <div className="flex flex-col w-full">
+                    
                     <nav className="flex w-full bg-navBlack px-[120px] py-2.5 items-center">
                         <div className="flex w-full items-center justify-end gap-[75px]">
                             <div className="flex gap-5 items-center">
                                 <span className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
-                                    <a href="">
+                                    <Link href="/Home">
                                         Home
-                                    </a> 
+                                    </Link> 
                                 </span>
                                 <span className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
-                                    <a href="">
+                                    <Link href="/Work">
                                         Works
-                                    </a> 
+                                    </Link> 
                                 </span>
                                 <span className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
-                                    <a href="">
+                                    <Link href="/Contact">
                                         Contact
-                                    </a> 
+                                    </Link> 
                                 </span>
                             </div>
                             <div className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
                                 <a href='/'>
-                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white items-center ">
-                                        RESUME  <HiOutlineDownload className="text-base"/>
+                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
+                                        RESUME  <HiOutlineDownload className="text-xl"/>
                                     </div>
                                 </a>
                             </div>
@@ -38,7 +51,7 @@ const AboutPage = ()=> {
 
                     <div className="flex w-full gap-10 pt-6">
                         <div className="flex flex-[0.6]">
-                            <div className="inline-flex w-fit font-bold font-poppins text-skyblue text-[40px]">
+                            <div className={`flex h-full items-center w-fit font-bold font-poppins text-skyblue text-[40px] ${dynamicDesign} duration-500`}>
                                 About
                             </div>
                             <div className="flex flex-col items-center gap-4">
@@ -61,7 +74,7 @@ const AboutPage = ()=> {
                                         </div>
                                     </div>
                                 </div>
-                                <button className="w-[294px] px-4 py-2 content-center font-poppins font-normal text-light text-[22px] border border-white">
+                                <button className="w-[294px] px-4 py-2 content-center font-poppins font-normal text-light text-[22px]  border hover:border-2 border-white">
                                     Contact Me
                                 </button>
                             </div>
@@ -88,6 +101,7 @@ const AboutPage = ()=> {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

@@ -21,6 +21,7 @@ const config: Config = {
       'bgBlack':'#010101',
       'skyblue':'#00ADB5',
       'navBlack':'#0C0D0F',
+      'cardgrey':'rgba(171, 171, 171, 0.17)', 'textback':'rgba(0, 173, 181, 0.10)',
       'grey':'#ABB2BF',
       'Gray':'#393E46',
       'light':'#EEE',
@@ -30,9 +31,10 @@ const config: Config = {
     extend: {
 
       fontFamily: {
-        'poppins':'Poppins',
+        'poppins':['Poppins','sans-serif'],
         'roboto':'Roboto',
-        'fira': ['Fira Code', 'monospace'],
+        'fira': ['Fira Code','monospace'],
+        'inter':['Inter','sans-serif'],
       },
 
       backgroundImage: {
@@ -42,6 +44,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@headlessui/tailwindcss')
+  ],
 }
 export default config

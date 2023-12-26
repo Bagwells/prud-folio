@@ -1,10 +1,12 @@
-import AboutPage from "./About";
-import HomePage from "./Home";
+'use client'
+import HomePage from "./Home/page";
+
+
 
 export default function Home () {
-  return(
-    <>
-      <AboutPage />
-    </>
-  )
+    return(
+      <>
+        <HomePage />
+      </>
+    )
 }
