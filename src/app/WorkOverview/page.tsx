@@ -1,16 +1,26 @@
 'use client'
-
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { HiOutlineDownload } from "react-icons/hi";
-import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowLeftLong, FaArrowUpLong } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 
 
 const WorkOverview =()=> {
+
+    const [design, setDesign] = useState(false)
+    
+    const swipe = design? "" : "-translate-x-full"
+    const buttonSwipe = design? "opacity-100" : "opacity-0"
+
+    useEffect(()=>{
+        setDesign(true)
+    })
+
     return(
         <>
-            <div className="w-full h-full">
-                <div className="flex w-full h-full bg-bgBlack px-[120px] pt-12 pb-14 ">
+            <div className="w-full h-full pverflow-hidden">
+                <div className="flex w-full h-full bg-bgBlack px-[120px] pt-12 pb-14 overflow-hidden">
                     <div className="flex flex-col w-full">
                         <nav className="flex w-full bg-navBlack px-[120px] py-2.5 items-center">
                             <div className="flex w-full items-center justify-end gap-[75px]">
@@ -41,13 +51,14 @@ const WorkOverview =()=> {
                             </div>
                         </nav>
 
-                        <div className="flex w-full h-fit items-center my-2 gap-6">
+                        <div id="main"
+                            className="flex w-full h-fit items-center my-2 gap-6 overflow-hidden">
                             <Link href="/Work">
-                                <div className="flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]">
+                                <div className={`flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F] ${buttonSwipe} motion-reduce:transition-opacity ease-in delay-500`}>
                                     <FaArrowLeftLong className="text-skyblue text-2xl"/>
                                 </div>
                             </Link>
-                            <div className="inline-flex w-fit font-bold font-poppins text-skyblue text-[40px]">
+                            <div className={`inline-flex w-fit font-bold font-poppins text-skyblue text-[40px] ${swipe} duration-300`}>
                                 Works
                             </div>
                         </div>
@@ -110,8 +121,12 @@ const WorkOverview =()=> {
 
                                 </div>
                             </div>
-                            <div className="flex w-[120px]">
-
+                            <div className="w-[120px] h-full justify-center flex">
+                                <Link href="#main">
+                                    <div className={`fixed flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
+                                        <FaArrowUpLong className="text-skyblue text-2xl"/>
+                                    </div> 
+                                </Link> 
                             </div>
                         </div>
                     </div>

@@ -5,25 +5,33 @@ import { HiOutlineDownload } from "react-icons/hi"
 import { Tab } from "@headlessui/react"
 import { useState, useEffect } from "react"
 import CardItem from "@/components/Card"
+import { FaArrowUpLong } from "react-icons/fa6"
 
 
 const WorkPage = () => {
 
     const [selectedIndex, setSelectedIndex] = useState(0)
 
-    const [ design, setDesign ] = useState(false)
+    const [ designRev, setDesignRev ] = useState(false)
+    const [ design , setDesign ] = useState(false)
 
-    const dynamicDesign = design? 'translate-x-0 translate-y-0' : 'translate-x-24 translate-y-56'
-    const swipeLeft = design? 'translate-x-0' : '-translate-x-3/4'
+    const dynamicDesign = designRev? '' : 'translate-x-24 translate-y-56'
+    const swipeLeftRev = designRev? '' : '-translate-x-3/4'
+
+    const swipeLeft = design? '-translate-x-[80%]' : ''
+
+    const toggle =()=> {
+        setDesign(true)
+    }
 
     useEffect(()=>{
-        setDesign(true)
+        setDesignRev(true)
     })
 
     return(
         <>
-            <div className="flex w-full bg-bgBlack px-[120px] pt-12 pb-14 ">
-                <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full bg-bgBlack px-[120px] pt-12 pb-14 ">
+                <div className="flex flex-col h-full w-full">
                     <nav className="flex w-full bg-navBlack px-[120px] py-2.5 items-center">
                         <div className="flex w-full items-center justify-end gap-[75px]">
                             <div className="flex gap-5 items-center">
@@ -53,7 +61,8 @@ const WorkPage = () => {
                         </div>
                     </nav>
 
-                    <div className="flex w-full h-fit items-center my-2 gap-40">
+                    <div id="main"
+                        className="flex w-full h-fit items-center my-2 gap-40">
                         <div className={`inline-flex w-fit font-bold font-poppins text-skyblue text-[40px] ${dynamicDesign} duration-300`}>
                             Works
                         </div>
@@ -64,7 +73,7 @@ const WorkPage = () => {
                     
                     <div className="w-full flex pl-10 my-8">
                         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-                            <Tab.List className={`flex flex-col w-[194px] ml-5 items-start gap-6 ${swipeLeft} duration-500`}>
+                            <Tab.List className={`flex flex-col w-[194px] ml-5 items-start gap-6 ${swipeLeftRev} ${swipeLeft} duration-500`}>
                                 <Tab className="font-poppins font-normal text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
                                     UIUX Design
                                 </Tab>
@@ -72,7 +81,7 @@ const WorkPage = () => {
                                     Branding
                                 </Tab>
                             </Tab.List>
-                            <Tab.Panels className="ml-12">
+                            <Tab.Panels className="ml-12 h-full">
                                 <Tab.Panel>
                                     <div className="flex flex-col w-full items-center">
                                         <div className="w-fit grid grid-cols-2 gap-[18px]">
@@ -81,24 +90,28 @@ const WorkPage = () => {
                                                 title="Plugh Mobile App"
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/WorkOverview"
+                                                buttonclick={toggle}
                                             />
                                              <CardItem 
                                                 picture="/LandingPage.svg"
                                                 title="Plugh Landing Page"
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/WorkOverview"
+                                                buttonclick={toggle}
                                             />
                                             <CardItem 
                                                 picture="/Plugh.svg"
                                                 title="Plugh Mobile App"
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/WorkOverview"
+                                                buttonclick={toggle}
                                             />
                                             <CardItem 
                                                 picture="/Plugh.svg"
                                                 title="Plugh Mobile App"
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/WorkOverview"
+                                                buttonclick={toggle}
                                             />
                                         </div>
                                     </div>
@@ -111,32 +124,40 @@ const WorkPage = () => {
                                                 title="Plugh Mobile App"
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/WorkOverview"
+                                                buttonclick={toggle}
                                             />
                                              <CardItem 
                                                 picture="/LandingPage.svg"
                                                 title="Plugh Landing Page"
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/WorkOverview"
+                                                buttonclick={toggle}
                                             />
                                             <CardItem 
                                                 picture="/Plugh.svg"
                                                 title="Plugh Mobile App"
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/WorkOverview"
+                                                buttonclick={toggle}
                                             />
                                             <CardItem 
                                                 picture="/Plugh.svg"
                                                 title="Plugh Mobile App"
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/WorkOverview"
+                                                buttonclick={toggle}
                                             />
                                         </div>
                                     </div>
                                 </Tab.Panel>
                             </Tab.Panels>
                         </Tab.Group>
-                        <div className="w-[120px] flex flex-col">
-
+                        <div className="w-[120px] h-full justify-center flex">
+                            <Link href="#main">
+                                <div className={`fixed flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
+                                    <FaArrowUpLong className="text-skyblue text-2xl"/>
+                                </div> 
+                            </Link> 
                         </div>
                     </div>
                 </div>

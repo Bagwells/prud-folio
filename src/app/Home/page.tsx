@@ -3,28 +3,38 @@ import { HiOutlineDownload } from "react-icons/hi";
 import Link from "next/link";
 import { RiTwitterXFill , RiInstagramFill, RiLinkedinBoxFill } from "react-icons/ri";
 import { FaSquareBehance } from "react-icons/fa6";
-import Image from "next/image";
 import { useEffect, useState } from "react"
 
 export default function HomePage() {
 
     const [ design , setDesign ] = useState(false);
 
+    const [ designRev , setDesignRev ] = useState(false);
+
 
     const toggle = () => {
         setDesign(true)
     }
 
-    const swipeLeft = design? "lg:-translate-x-full":"lg:-translate-x-0"
-    const swipeRight = design? "lg:translate-x-full":"lg:translate-x-0"
-    const swipeUp = design? "-translate-y-[224px]" : "-translate-y-0"
+    const swipeLeft = design? "-translate-x-full":""
+    const swipeRight = design? "translate-x-full":""
+    const swipeUp = design? "-translate-y-[224px]" : ""
+
+    const swipeLeftRev = designRev? "": "-translate-x-full"
+    const swipeRightRev = designRev? "": "translate-x-full"
+    const swipeUpRev = designRev? "": "-translate-y-[224px]"
+
+    useEffect(()=> {
+        setDesignRev(true)
+    })
+
     
 
   return (
     <>
       <div className="flex w-full bg-bgBlack px-[120px] py-12 overflow-hidden">
 
-        <div className={`absolute -left-20 z-50 flex items-center rotate-90 ${swipeUp} duration-300 gap-2 `}>
+        <div className={`fixed -left-20 z-50 flex items-center rotate-90 ${swipeUp} ${swipeUpRev} duration-300 gap-2 `}>
             <div className="w-80 h-0.5 bg-grey" />
             <div className="flex gap-2 cursor-pointer">
                 <a href="">
@@ -55,7 +65,7 @@ export default function HomePage() {
             </nav>
 
             <div className="flex w-full gap-10">
-                <div className={`flex flex-col pt-5 pl-14 gap-20 ${swipeLeft} duration-300`}>
+                <div className={`flex flex-col pt-5 pl-14 gap-20 ${swipeLeft} ${swipeLeftRev} duration-300`}>
                     <div className="flex">
                         <img className="w-[224px]" src="/Profile.svg" alt=""/>
                         <div className="inline-flex my-2 font-poppins font-bold text-Gray text-[80px] opacity-20">HELLO</div>
@@ -81,7 +91,7 @@ export default function HomePage() {
                     </div>
                 </div>
 
-                <div className={`flex flex-col pt-12 gap-6 ${swipeRight} duration-300`}>
+                <div className={`flex flex-col pt-12 gap-6 ${swipeRight} ${swipeRightRev} duration-300`}>
                     <div className="flex flex-col ">
                         <div className="inline-flex gap-4">
                             <div className="inline-flex font-bold font-poppins text-[50px] text-light p-0">I'm <br/>Prudence</div>

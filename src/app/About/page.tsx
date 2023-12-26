@@ -9,11 +9,19 @@ const AboutPage = ()=> {
     
     const [ design , setDesign ] = useState(false)
 
+    const [ designRev , setDesignRev ] = useState(false)
+
+    const toggle =()=> {
+        setDesignRev(true)
+    }
+
+
     useEffect(()=>{
         setDesign(true)
     })
 
-    const dynamicDesign = design? "-translate-y-80" : ""
+    const dynamicDesign = design? "" : "translate-y-80"
+    const dynamicDesignRev = designRev? "translate-y-80" : ""
 
     return (
         <>
@@ -23,17 +31,17 @@ const AboutPage = ()=> {
                     <nav className="flex w-full bg-navBlack px-[120px] py-2.5 items-center">
                         <div className="flex w-full items-center justify-end gap-[75px]">
                             <div className="flex gap-5 items-center">
-                                <span className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                <span onClick={toggle} className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
                                     <Link href="/Home">
                                         Home
                                     </Link> 
                                 </span>
-                                <span className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                <span onClick={toggle} className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
                                     <Link href="/Work">
                                         Works
                                     </Link> 
                                 </span>
-                                <span className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                <span onClick={toggle} className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
                                     <Link href="/Contact">
                                         Contact
                                     </Link> 
@@ -51,7 +59,7 @@ const AboutPage = ()=> {
 
                     <div className="flex w-full gap-10 pt-6">
                         <div className="flex flex-[0.6]">
-                            <div className={`flex h-full items-center w-fit font-bold font-poppins text-skyblue text-[40px] ${dynamicDesign} duration-500`}>
+                            <div className={`flex h-full w-fit font-bold font-poppins text-skyblue text-[40px] ${dynamicDesign} ${dynamicDesignRev} duration-300`}>
                                 About
                             </div>
                             <div className="flex flex-col items-center gap-4">
