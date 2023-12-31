@@ -123,7 +123,7 @@ const WorkOverview =()=> {
                             </div>
                             <div className="w-[120px] h-full justify-center flex">
                                 <Link href="#main">
-                                    <div className={`fixed flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
+                                    <div className={`fixed top-[50%] flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
                                         <FaArrowUpLong className="text-skyblue text-2xl"/>
                                     </div> 
                                 </Link> 

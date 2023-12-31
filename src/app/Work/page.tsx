@@ -53,7 +53,7 @@ const WorkPage = () => {
                             </div>
                             <div className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
                                 <a href='/'>
-                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white items-center ">
+                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
                                         RESUME  <HiOutlineDownload className="text-base"/>
                                     </div>
                                 </a>
@@ -152,9 +152,9 @@ const WorkPage = () => {
                                 </Tab.Panel>
                             </Tab.Panels>
                         </Tab.Group>
-                        <div className="w-[120px] h-full justify-center flex">
+                        <div className="flex w-[120px] h-full justify-center">
                             <Link href="#main">
-                                <div className={`fixed flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
+                                <div className={`fixed top-[50%] flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
                                     <FaArrowUpLong className="text-skyblue text-2xl"/>
                                 </div> 
                             </Link> 

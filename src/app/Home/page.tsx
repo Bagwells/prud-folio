@@ -32,7 +32,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="flex w-full bg-bgBlack px-[120px] py-12 overflow-hidden">
+      <div className="flex w-full bg-bgBlack px-8 md:px-20 lg:px-[120px] 2xl:px-[240px] py-12 overflow-hidden">
 
         <div className={`fixed -left-20 z-50 flex items-center rotate-90 ${swipeUp} ${swipeUpRev} duration-300 gap-2 `}>
             <div className="w-80 h-0.5 bg-grey" />
