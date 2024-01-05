@@ -12,7 +12,7 @@ const config: Config = {
       'base': '250px',
       'sm': '640px',
       'md': '760px',
-      'lg': '1024px',
+      'lg': '1025px',
       'xl': '1280px',
       '2xl': '1536px',
     },
@@ -35,6 +35,17 @@ const config: Config = {
         'roboto':'Roboto',
         'fira': ['Fira Code','monospace'],
         'inter':['Inter','sans-serif'],
+        'Sofia':['Sofia Sans','sans-serif'],
+      },
+
+      colors: {
+        'bgBlack':'#010101', 'white':'#fff',
+        'skyblue':'#00ADB5',
+        'navBlack':'#0C0D0F',
+        'cardgrey':'rgba(171, 171, 171, 0.17)', 'textback':'rgba(0, 173, 181, 0.10)',
+        'grey':'#ABB2BF',
+        'Gray':'#393E46', 'darkgrey':'#292929',
+        'light':'#EEE',
       },
 
       backgroundImage: {

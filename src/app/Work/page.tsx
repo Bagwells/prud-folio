@@ -4,8 +4,10 @@ import Link from "next/link"
 import { HiOutlineDownload } from "react-icons/hi"
 import { Tab } from "@headlessui/react"
 import { useState, useEffect } from "react"
-import CardItem from "@/components/Card"
+import CardItemMobile from "@/components/Card"
 import { FaArrowUpLong } from "react-icons/fa6"
+import { RxHamburgerMenu } from "react-icons/rx"
+import { IoIosCloseCircle } from "react-icons/io"
 
 
 const WorkPage = () => {
@@ -28,131 +30,161 @@ const WorkPage = () => {
         setDesignRev(true)
     })
 
-    return(
+    const [slideShow, setSlideShow] = useState(false);
+
+    const slideToggle =()=> {
+       setSlideShow (prevState => !prevState)
+    }
+
+    const designShift = slideShow? "hidden opacity-20" : "opacity-100"
+    const designShift2 = slideShow? "opacity-100": "hidden opacity-20"
+    const height = slideShow? "h-fit" : "h-0"
+
+    return (
         <>
-            <div className="flex flex-col w-full bg-bgBlack px-[120px] pt-12 pb-14 ">
+            <div className="flex flex-col w-full bg-bgBlack px-5 md:px-20 lg:px-[120px] 2xl:px-80 pt-5 lg:pt-12 pb-14 ">
                 <div className="flex flex-col h-full w-full">
-                    <nav className="flex w-full bg-navBlack px-[120px] py-2.5 items-center">
-                        <div className="flex w-full items-center justify-end gap-[75px]">
-                            <div className="flex gap-5 items-center">
-                                <span className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
-                                    <Link href="/Home">
-                                        Home
-                                    </Link> 
-                                </span>
-                                <span className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
-                                    <Link href="/About">
-                                        About
-                                    </Link> 
-                                </span>
-                                <span className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
-                                    <Link href="/Contact">
-                                        Contact
-                                    </Link> 
-                                </span>
+                    <div className="relative flex w-full h-fit">
+                        <nav className="absolute flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
+                            <div className="flex flex-col lg:hidden w-full justify-center items-end">
+                                <div onClick={slideToggle}
+                                    className="flex w-fit items-center lg:hidden">
+                                    <RxHamburgerMenu className={`text-white text-[34px] motion-reduce:transition-all duration-500 ${designShift}`} />
+                                </div>
+                                <div className={`flex flex-col w-full transition-[height] ease-out ${height} delay-75 duration-500 justify-center items-end gap-6 overflow-hidden`}>
+                                    <IoIosCloseCircle onClick={slideToggle} className={`text-3xl text-white motion-reduce:transition-all ease-in-out duration-500 ${designShift2}`}/>
+                                        <div className="flex flex-col w-full items-center px-2.5 py-10  gap-10">    
+                                            <div className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
+                                                <a href='/'>
+                                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
+                                                        RESUME <HiOutlineDownload className="text-xl"/>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div className="flex w-full flex-col gap-5 items-center">
+                                                <span onClick={toggle} className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                                    <Link href="/Home">
+                                                        Home
+                                                    </Link> 
+                                                </span>
+                                                <span onClick={toggle} className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                                    <Link href="/About">
+                                                        About
+                                                    </Link> 
+                                                </span>
+                                                <span onClick={toggle} className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                                    <Link href="/Work">
+                                                        Works
+                                                    </Link> 
+                                                </span>
+                                                <span onClick={toggle} className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                                    <Link href="/Contact">
+                                                        Contact
+                                                    </Link> 
+                                                </span>
+                                            </div>
+                                        </div>
+                                </div>
                             </div>
-                            <div className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
-                                <a href='/'>
-                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
-                                        RESUME  <HiOutlineDownload className="text-base"/>
-                                    </div>
-                                </a>
+                            <div className="hidden lg:flex w-full items-center justify-end gap-[75px]">
+                                <div className="flex gap-5 items-center">
+                                    <span onClick={toggle} className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                        <Link href="/Home">
+                                            Home
+                                        </Link> 
+                                    </span>
+                                    <span onClick={toggle} className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                        <Link href="/About">
+                                            About
+                                        </Link> 
+                                    </span>
+                                    <span onClick={toggle} className="font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                        <Link href="/Contact">
+                                            Contact
+                                        </Link> 
+                                    </span>
+                                </div>
+                                <div className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
+                                    <a href='/'>
+                                        <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
+                                            RESUME  <HiOutlineDownload className="text-xl"/>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </nav>
+                        </nav>
+                    </div>
 
                     <div id="main"
                         className="flex w-full h-fit items-center my-2 gap-40">
                         <div className={`inline-flex w-fit font-bold font-poppins text-skyblue text-[40px] ${dynamicDesign} duration-300`}>
                             Works
                         </div>
-                        <div className="inline-flex pt-3 w-fit font-normal font-poppins text-lg text-white">
+                        <div className="hidden lg:inline-flex pt-3 w-fit font-normal font-poppins text-lg text-white">
                             I have made a few things, here are some of my favorite's
                         </div>
                     </div>
                     
-                    <div className="w-full flex pl-10 my-8">
+                    <div className="w-full flex flex-col lg:flex-row lg:pl-10 lg:my-8">
                         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-                            <Tab.List className={`flex flex-col w-[194px] ml-5 items-start gap-6 ${swipeLeftRev} ${swipeLeft} duration-500`}>
-                                <Tab className="font-poppins font-normal text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
+                            <Tab.List className={`flex lg:flex-col w-full lg:w-[194px] lg:ml-5 items-start gap-5 lg:gap-6 ${swipeLeftRev} ${swipeLeft} duration-500`}>
+                                <Tab className="flex w-full justify-center font-poppins font-normal text-2xl px-4 text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
                                     UIUX Design
                                 </Tab>
-                                <Tab className="font-poppins font-normal text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
+                                <Tab className=" flex w-full justify-center font-poppins font-normal text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
                                     Branding
                                 </Tab>
                             </Tab.List>
-                            <Tab.Panels className="ml-12 h-full">
+                            <Tab.Panels className="lg:ml-12 h-full gap-4 pb-4 lg:pb-0 px-3.5">
+                                <div className="lg:hidden inline-flex w-fit font-normal font-poppins text-base text-white mb-2">
+                                    I have made a few things, here are some of my favorite's
+                                </div>
                                 <Tab.Panel>
                                     <div className="flex flex-col w-full items-center">
-                                        <div className="w-fit grid grid-cols-2 gap-[18px]">
-                                            <CardItem 
+                                        <div className="w-fit grid grid-col-1 md:grid-cols-2 lg:gap-[18px]">
+                                            <CardItemMobile 
                                                 picture="/Plugh.svg"
                                                 title="Plugh Mobile App"
                                                 description="Connecting two people without sharing their personal details"
-                                                link="/WorkOverview"
-                                                buttonclick={toggle}
-                                            />
-                                             <CardItem 
+                                                link="/PlughMobile"
+                                                buttonclick={toggle} subtitle={"Logo"} subtitle2={"UIUX Design"} subtitle3={"Social"} subtitle4={"Mobile"}/>
+                                             <CardItemMobile
                                                 picture="/LandingPage.svg"
-                                                title="Plugh Landing Page"
+                                                title="Plugh"
                                                 description="Connecting two people without sharing their personal details"
-                                                link="/WorkOverview"
-                                                buttonclick={toggle}
-                                            />
-                                            <CardItem 
-                                                picture="/Plugh.svg"
-                                                title="Plugh Mobile App"
-                                                description="Connecting two people without sharing their personal details"
-                                                link="/WorkOverview"
-                                                buttonclick={toggle}
-                                            />
-                                            <CardItem 
-                                                picture="/Plugh.svg"
-                                                title="Plugh Mobile App"
-                                                description="Connecting two people without sharing their personal details"
-                                                link="/WorkOverview"
-                                                buttonclick={toggle}
-                                            />
+                                                link="/PlughWeb"
+                                                buttonclick={toggle} subtitle={"Logo"} subtitle2={"UIUX Design"} subtitle3={""} subtitle4={""}/>
+                                            <CardItemMobile 
+                                                picture="/G-M.svg"
+                                                title="Google Meal"
+                                                description="A google course case study for a restaurant delivery app."
+                                                link="/GoogleMeal"
+                                                buttonclick={toggle} subtitle={"Food"} subtitle2={"UIUX Design"} subtitle3={"Mobile"} subtitle4={"Case Study"}/>
+                                            <CardItemMobile
+                                                picture="/TheQue.svg"
+                                                title="The Que"
+                                                description="Create post, go live, write petitions, banter on topics that interests you and let your vote count!"
+                                                link="/TheQue"
+                                                buttonclick={toggle} subtitle={"Social"} subtitle2={"Mobile"} subtitle3={"UIUX Design"} subtitle4={""}/>
+                                            <CardItemMobile
+                                                picture="/Velion.svg"
+                                                title="Velion"
+                                                description="Responsive landing page for an agency, with the goal to bring innovation to business and brands."
+                                                link="/Velion"
+                                                buttonclick={toggle} subtitle={"Landing Page"} subtitle2={"UIUX Design"} subtitle3={""} subtitle4={""}/>
                                         </div>
                                     </div>
                                 </Tab.Panel>
                                 <Tab.Panel>
                                     <div className="flex flex-col w-full items-center">
-                                        <div className="w-fit grid grid-cols-2 gap-[18px]">
-                                            <CardItem 
-                                                picture="/Plugh.svg"
-                                                title="Plugh Mobile App"
-                                                description="Connecting two people without sharing their personal details"
-                                                link="/WorkOverview"
-                                                buttonclick={toggle}
-                                            />
-                                             <CardItem 
-                                                picture="/LandingPage.svg"
-                                                title="Plugh Landing Page"
-                                                description="Connecting two people without sharing their personal details"
-                                                link="/WorkOverview"
-                                                buttonclick={toggle}
-                                            />
-                                            <CardItem 
-                                                picture="/Plugh.svg"
-                                                title="Plugh Mobile App"
-                                                description="Connecting two people without sharing their personal details"
-                                                link="/WorkOverview"
-                                                buttonclick={toggle}
-                                            />
-                                            <CardItem 
-                                                picture="/Plugh.svg"
-                                                title="Plugh Mobile App"
-                                                description="Connecting two people without sharing their personal details"
-                                                link="/WorkOverview"
-                                                buttonclick={toggle}
-                                            />
+                                        <div className="w-fit grid grid-cols-1 md:grid-cols-2 gap-y-3.5 lg:gap-[18px]">
+                                            
                                         </div>
                                     </div>
                                 </Tab.Panel>
                             </Tab.Panels>
                         </Tab.Group>
-                        <div className="flex w-[120px] h-full justify-center">
+                        <div className="hidden lg:flex lg:w-[120px] h-full justify-center">
                             <Link href="#main">
                                 <div className={`fixed top-[50%] flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
                                     <FaArrowUpLong className="text-skyblue text-2xl"/>
