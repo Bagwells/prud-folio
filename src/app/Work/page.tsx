@@ -40,9 +40,18 @@ const WorkPage = () => {
     const designShift2 = slideShow? "opacity-100": "hidden opacity-20"
     const height = slideShow? "h-fit" : "h-0"
 
+    const resumeDownload =()=> {
+        const resumeUrl = "/Resume.pdf";
+        const link = document.createElement("a");
+        link.href = resumeUrl;
+        link.download = "Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+    }
+
     return (
         <>
-            <div className="flex flex-col w-full bg-bgBlack px-5 md:px-20 lg:px-[120px] 2xl:px-80 pt-5 lg:pt-12 pb-14 ">
+            <div className="flex flex-col w-full h-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pt-5 lg:pt-12 pb-14">
                 <div className="flex flex-col h-full w-full">
                     <div className="relative flex w-full h-fit">
                         <nav className="absolute flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
@@ -54,12 +63,10 @@ const WorkPage = () => {
                                 <div className={`flex flex-col w-full transition-[height] ease-out ${height} delay-75 duration-500 justify-center items-end gap-6 overflow-hidden`}>
                                     <IoIosCloseCircle onClick={slideToggle} className={`text-3xl text-white motion-reduce:transition-all ease-in-out duration-500 ${designShift2}`}/>
                                         <div className="flex flex-col w-full items-center px-2.5 py-10  gap-10">    
-                                            <div className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
-                                                <a href='/'>
-                                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
-                                                        RESUME <HiOutlineDownload className="text-xl"/>
-                                                    </div>
-                                                </a>
+                                            <div onClick={resumeDownload} className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
+                                                <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
+                                                    RESUME <HiOutlineDownload className="text-xl"/>
+                                                </div>
                                             </div>
                                             <div className="flex w-full flex-col gap-5 items-center">
                                                 <span onClick={toggle} className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
@@ -104,12 +111,10 @@ const WorkPage = () => {
                                         </Link> 
                                     </span>
                                 </div>
-                                <div className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
-                                    <a href='/'>
-                                        <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
-                                            RESUME  <HiOutlineDownload className="text-xl"/>
-                                        </div>
-                                    </a>
+                                <div onClick={resumeDownload} className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
+                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
+                                        RESUME  <HiOutlineDownload className="text-xl"/>
+                                    </div>
                                 </div>
                             </div>
                         </nav>
@@ -124,24 +129,23 @@ const WorkPage = () => {
                             I have made a few things, here are some of my favorite's
                         </div>
                     </div>
-                    
                     <div className="w-full flex flex-col lg:flex-row lg:pl-10 lg:my-8">
                         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-                            <Tab.List className={`flex lg:flex-col w-full lg:w-[194px] lg:ml-5 items-start gap-5 lg:gap-6 ${swipeLeftRev} ${swipeLeft} duration-500`}>
-                                <Tab className="flex w-full justify-center font-poppins font-normal text-xl md:text-2xl px-4 text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
+                            <Tab.List className={`flex lg:flex-col w-full lg:w-[200px] lg:ml-5 items-start gap-5 lg:gap-6 ${swipeLeftRev} ${swipeLeft} duration-500`}>
+                                <Tab className="flex w-full justify-center font-poppins font-normal text-xl md:text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
                                     UIUX Design
                                 </Tab>
                                 <Tab className=" flex w-full justify-center font-poppins font-normal text-xl md:text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
                                     Branding
                                 </Tab>
-                            </Tab.List>
+                            </Tab.List> 
                             <Tab.Panels className="lg:ml-12 h-full gap-4 pb-4 lg:pb-0 px-3.5">
                                 <div className="lg:hidden inline-flex w-fit font-normal font-poppins text-base text-white mb-2">
                                     I have made a few things, here are some of my favorite's
                                 </div>
                                 <Tab.Panel>
-                                    <div className="flex flex-col w-full items-center">
-                                        <div className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px]">
+                                    <div className="flex flex-col w-full h-full items-center">
+                                        <div className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px] overflow-y-auto">
                                             <CardItemMobile 
                                                 picture="/Plugh.svg"
                                                 title="Plugh Mobile App"
@@ -184,12 +188,13 @@ const WorkPage = () => {
                                 </Tab.Panel>
                             </Tab.Panels>
                         </Tab.Group>
-                        <div className="hidden lg:flex lg:w-[120px] h-full justify-center">
-                            <Link href="#main">
-                                <div className={`fixed top-[50%] flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
-                                    <FaArrowUpLong className="text-skyblue text-2xl"/>
-                                </div> 
-                            </Link> 
+                        <div className="hidden relative lg:flex lg:w-[120px]">
+                            <div className="flex flex-col w-full h-full items-center justify-end">
+                                <Link href="#main"
+                                    className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
+                                        <FaArrowUpLong className="text-skyblue text-2xl"/> 
+                                </Link>
+                            </div> 
                         </div>
                     </div>
                 </div>

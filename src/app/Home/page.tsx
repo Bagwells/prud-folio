@@ -40,11 +40,19 @@ export default function HomePage() {
     const designShift = slideShow? "hidden opacity-20" : "opacity-100"
     const designShift2 = slideShow? "opacity-100": "hidden opacity-20"
     const height = slideShow? "h-fit" : "h-0"
-      
 
+    const resumeDownload =()=> {
+        const resumeUrl = "/Resume.pdf";
+        const link = document.createElement("a");
+        link.href = resumeUrl;
+        link.download = "Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+    }
+      
   return (
     <>
-    <div className="flex flex-col w-full bg-bgBlack px-5 md:px-20 lg:px-[120px] 2xl:px-80 py-5 md:py-12 overflow-hidden">
+    <div className="flex flex-col w-full bg-bgBlack px-5 md:px-20 2xl:px-80 py-5 md:py-12 overflow-hidden">
 
         <div className={`fixed left-[-180px] md:left-[-140px] lg:-left-20 z-0 md:z-50 flex items-center rotate-90 ${swipeUp} ${swipeUpRev} duration-300 gap-2 `}>
             <div className="w-80 h-0.5 bg-grey" />
@@ -75,21 +83,17 @@ export default function HomePage() {
                         <div className={`flex flex-col w-full transition-[height] ease-out ${height} delay-75 duration-500 justify-center items-end gap-6 overflow-hidden`}>
                             <IoIosCloseCircle onClick={slideToggle} className={`text-3xl text-white motion-reduce:transition-all ease-in-out duration-500 ${designShift2}`}/>
                                 <div className="flex flex-col w-full items-center px-2.5 py-10">    
-                                    <div className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
-                                        <a href='/'>
-                                            <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
-                                                RESUME <HiOutlineDownload className="text-xl"/>
-                                            </div>
-                                        </a>
+                                    <div onClick={resumeDownload} className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
+                                        <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
+                                            RESUME <HiOutlineDownload className="text-xl"/>
+                                        </div>
                                     </div>
                                 </div>
                         </div>
-                        <div className="hidden lg:flex w-fit p-2.5 items-center justify-center cursor-pointer">
-                            <a href='/'>
-                                <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
-                                    RESUME  <HiOutlineDownload className="text-xl"/>
-                                </div>
-                            </a>
+                        <div onClick={resumeDownload} className="hidden lg:flex w-fit p-2.5 items-center justify-center cursor-pointer">
+                            <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
+                                RESUME  <HiOutlineDownload className="text-xl"/>
+                            </div>
                         </div>
                     </div>
                 </nav>

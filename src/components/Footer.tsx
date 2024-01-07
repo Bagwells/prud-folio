@@ -3,7 +3,7 @@ import { FaRegCopyright } from "react-icons/fa";
 const Footer = ()=> {
     return(
         <>
-            <div className="w-full flex bg-bgBlack py-[38px] px-5 md:px-20 lg:px-60 items-center border-t border-t-Gray">
+            <div className="w-full flex bg-bgBlack py-[38px] px-5 md:px-20 lg:px-60 items-center border-t border-t-Gray z-50">
                 <div className="flex w-full h-5 justify-between items-center">
                     <div className=" grid grid-cols-2 md:flex gap-x-10 gap-y-4 lg:gap-[50px]">
                         <span className="font-inter font-normal text-base text-white">

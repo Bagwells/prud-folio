@@ -22,8 +22,8 @@ const AboutPage = ()=> {
         setDesign(true)
     })
 
-    const dynamicDesign = design? "" : "translate-y-80"
-    const dynamicDesignRev = designRev? "translate-y-80" : ""
+    const dynamicDesign = design? "" : ""
+    const dynamicDesignRev = designRev? "" : ""
 
     const [slideShow, setSlideShow] = useState(false);
 
@@ -35,9 +35,18 @@ const AboutPage = ()=> {
     const designShift2 = slideShow? "opacity-100": "hidden opacity-20"
     const height = slideShow? "h-fit" : "h-0"
 
+    const resumeDownload =()=> {
+        const resumeUrl = "/Resume.pdf";
+        const link = document.createElement("a");
+        link.href = resumeUrl;
+        link.download = "Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+    }
+
     return (
         <>
-            <div className="flex w-full bg-bgBlack px-5 md:px-20 lg:px-[120px] 2xl:px-80 pt-5 md:pt-12 pb-14 overflow-hidden">
+            <div className="flex w-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pt-5 md:pt-12 pb-14 overflow-hidden">
                 <div className="flex flex-col w-full gap-4">
                     <div className="relative flex w-full h-fit">
                         <nav className="absolute flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
@@ -50,11 +59,9 @@ const AboutPage = ()=> {
                                     <IoIosCloseCircle onClick={slideToggle} className={`text-3xl text-white motion-reduce:transition-all ease-in-out duration-500 ${designShift2}`}/>
                                         <div className="flex flex-col w-full items-center px-2.5 py-10  gap-10">    
                                             <div className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
-                                                <a href='/'>
-                                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
-                                                        RESUME <HiOutlineDownload className="text-xl"/>
-                                                    </div>
-                                                </a>
+                                                <div onClick={resumeDownload} className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
+                                                    RESUME <HiOutlineDownload className="text-xl"/>
+                                                </div>
                                             </div>
                                             <div className="flex w-full flex-col gap-5 items-center">
                                                 <span onClick={toggle} className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
@@ -99,12 +106,10 @@ const AboutPage = ()=> {
                                         </Link> 
                                     </span>
                                 </div>
-                                <div className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
-                                    <a href='/'>
-                                        <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
-                                            RESUME  <HiOutlineDownload className="text-xl"/>
-                                        </div>
-                                    </a>
+                                <div onClick={resumeDownload} className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
+                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
+                                        RESUME  <HiOutlineDownload className="text-xl"/>
+                                    </div>
                                 </div>
                             </div>
                         </nav>
