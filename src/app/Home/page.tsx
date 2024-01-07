@@ -96,10 +96,12 @@ export default function HomePage() {
             </div>
             <div className="flex lg-hidden w-full h-10 md:h-20"/>
             <div className="flex flex-col pl-8 md:pl-12 lg:pl-0 lg:flex-row w-full lg:gap-10">
-                <div className={`flex flex-col pt-5  lg:w-[65%] lg:pl-14 gap-20 ${swipeLeft} ${swipeLeftRev} duration-300`}>
+                <div className={`flex flex-col pt-5 lg:w-[75%] lg:pl-14 gap-20 ${swipeLeft} ${swipeLeftRev} duration-300`}>
                     <div className="flex flex-col lg:flex-row">
-                        <img className="w-[151px] lg:w-[224px]" src="/Profile.svg" alt=""/>
-                        <div className="inline-flex my-2 font-poppins font-bold text-Gray text-5xl md:text-6xl xl:text-[80px] mix-blend-screen opacity-20">HELLO</div>
+                        <img className="w-[151px] md:w-[224px]" src="/Profile.svg" alt=""/>
+                        <div className="inline-flex my-2 font-poppins font-bold text-Gray text-5xl md:text-6xl xl:text-[80px] mix-blend-screen opacity-20">
+                            HELLO
+                        </div>
                     </div>
                     <div className={`w-fit hidden gap-4 lg:flex flex-col`}>
                         <span onClick={toggle} 
@@ -123,39 +125,31 @@ export default function HomePage() {
                 </div>
 
                 <div className={`flex flex-col lg:pt-12 gap-3 lg:gap-6 ${swipeRight} ${swipeRightRev} duration-300`}>
-                    <div className="flex flex-col ">
-                        <div className="inline-flex gap-1 sm:gap-4 ">
-                            <div className="inline-flex font-bold font-poppins text-xl sm:text-3xl xl:text-[50px] text-light p-0">I'm <br/> Prudence</div>
-                            <div className="inline-flex self-end font-bold font-poppins text-xl sm:text-3xl xl:text-[50px] text-skyblue">Francis</div>
+                    <div className="flex flex-col gap-1">
+                        <div className="tracking-normal font-bold font-poppins text-3xl xl:text-[50px] text-light">I'm</div>
+                        <div className="tracking-normal font-bold font-poppins text-3xl xl:text-[50px] text-light">
+                            Prudence<span className="text-skyblue"> Francis</span>
                         </div>
                         <img className="w-[136px] md:w-[200px]" src="/underline.svg" alt=""/>
                     </div>
                     <div className="flex">
                         <div className="flex flex-col">
-                            <div className="inline-flex gap-1 sm:gap-2">
-                                <div className="font-poppins font-normal text-light text-xs md:text-base lg:text-2xl">Crafting</div>
-                                <div className="font-poppins font-bold text-light text-xs md:text-base lg:text-2xl">Immersive</div>
-                                <div className="font-poppins font-normal text-light text-xs md:text-base lg:text-2xl">digital</div>
-                                <div className="flex lg:hidden font-poppins font-normal text-xs md:text-base">experience</div>
-                            </div>
-                            <div className="inline-flex flex-wrap max-w-md gap-1 sm:gap-2">
-                                <div className="hidden lg:flex flexfont-poppins font-normal text-light text-2xl">experience through intuitive</div>
-                                <div className="lg:hidden font-poppins font-normal text-light text-xs md:text-base">through intuitive</div>
-                                <div className="font-poppins font-bold text-light text-xs md:text-base lg:text-2xl">design.</div>
+                            <div className="font-poppins font-normal text-light text-sm md:text-2xl">
+                                Crafting <span className="font-bold">Immersive</span> digital experience through intuitive <span className="font-bold">design.</span>
                             </div>
                         </div>
-                        <img className="w-[78px] md:w-[215px] animate-pulse rotate-45 lg:rotate-0" src="/CurvedArrow.svg" alt=""/>
+                        <img className="w-[100px] md:w-[215px] animate-pulse rotate-45 lg:rotate-0" src="/CurvedArrow.svg" alt=""/>
                     </div>
-                    <div className="flex relative w-fit lg:w-full h-fit items-center justify-start lg:justify-end lg:pr-20">
-                        <div className="flex w-fit flex-col lg:mr-7 gap-2 z-50">
-                            <div className="inline-flex font-normal text-light text-sm sm:text-xl">
+                    <div className="flex relative lg:w-full items-center lg:justify-end lg:pr-20">
+                        <div className="flex flex-col gap-2 z-10 ml-7 lg:mr-8">
+                            <div className="font-normal text-light text-sm md:text-xl">
                                 Brand designer
                             </div>
-                            <div className="inline-flex font-normal text-light text-sm sm:text-xl">
+                            <div className="font-normal text-light text-sm md:text-xl">
                                 UIUX designer
                             </div>
                         </div>
-                        <img src="/Roundline.svg" className="absolute animate-pulse w-[125px] sm:w-[200px]" alt=""/>
+                        <img src="/Roundline.svg" className="absolute animate-pulse w-[160px] md:w-[220px]" alt=""/>
                     </div>
                 </div>
             </div>

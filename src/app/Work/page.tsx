@@ -114,10 +114,10 @@ const WorkPage = () => {
                             </div>
                         </nav>
                     </div>
-
+                    <div className="w-full h-16"/>
                     <div id="main"
                         className="flex w-full h-fit items-center my-2 gap-40">
-                        <div className={`inline-flex w-fit font-bold font-poppins text-skyblue text-[40px] ${dynamicDesign} duration-300`}>
+                        <div className={`inline-flex w-fit font-bold font-poppins text-skyblue text-xl lg:text-[40px] ${dynamicDesign} duration-300`}>
                             Works
                         </div>
                         <div className="hidden lg:inline-flex pt-3 w-fit font-normal font-poppins text-lg text-white">
@@ -128,10 +128,10 @@ const WorkPage = () => {
                     <div className="w-full flex flex-col lg:flex-row lg:pl-10 lg:my-8">
                         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
                             <Tab.List className={`flex lg:flex-col w-full lg:w-[194px] lg:ml-5 items-start gap-5 lg:gap-6 ${swipeLeftRev} ${swipeLeft} duration-500`}>
-                                <Tab className="flex w-full justify-center font-poppins font-normal text-2xl px-4 text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
+                                <Tab className="flex w-full justify-center font-poppins font-normal text-xl md:text-2xl px-4 text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
                                     UIUX Design
                                 </Tab>
-                                <Tab className=" flex w-full justify-center font-poppins font-normal text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
+                                <Tab className=" flex w-full justify-center font-poppins font-normal text-xl md:text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
                                     Branding
                                 </Tab>
                             </Tab.List>
@@ -141,7 +141,7 @@ const WorkPage = () => {
                                 </div>
                                 <Tab.Panel>
                                     <div className="flex flex-col w-full items-center">
-                                        <div className="w-fit grid grid-col-1 md:grid-cols-2 lg:gap-[18px]">
+                                        <div className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px]">
                                             <CardItemMobile 
                                                 picture="/Plugh.svg"
                                                 title="Plugh Mobile App"

@@ -123,7 +123,7 @@ const AboutPage = ()=> {
                                             Prudence Francis
                                         </div>
                                         <div className="flex w-full h-fit items-center justify-start">
-                                            <div className="flex w-fit ml-5 flex-col gap-2 z-50">
+                                            <div className="flex w-fit ml-5 flex-col gap-2 z-10">
                                                 <div className="inline-flex font-normal text-light text-sm sm:text-xl">
                                                     Brand designer
                                                 </div>
@@ -141,20 +141,20 @@ const AboutPage = ()=> {
                             <div className="inline-flex lg:hidden font-poppins font-bold text-light text-2xl lg:text-[35px] text-left tracking-[4px] w-fit">
                                 Prudence Francis
                             </div>
-                            <div className="inline-flex gap-2">
-                                <div className="font-fira font-normal text-Gray text-base">Hello, I'm</div>
-                                <div className="font-fira font-bold text-skyblue text-base">Prudence!</div>
+                            
+                            <div className="font-fira font-normal text-grey text-base">
+                                Hello, I'm <span className="font-bold text-skyblue">Prudence!</span>
                             </div>
-                            <div className="font-fira font-normal text-Gray text-base">
+                            <div className="font-fira font-normal text-grey text-base">
                                 I'm a self-taught product designer based in Lagos, Nigeria. I believe that a great design
                                 is not one that is only pleasing aesthetically but also solve real-world problems.
                             </div>
-                            <div className="font-fira font-normal text-Gray text-base">
+                            <div className="font-fira font-normal text-grey text-base">
                                 Transforming my creativity and knowledge into a product through UI design, Ux design, and prototyping.
                                 It has been my passion for over 5years. My work is driven by a deep curiosity and desire to create products 
                                 that are both functional and delightful to use.
                             </div>
-                            <div className="font-fira font-normal text-Gray text-base">
+                            <div className="font-fira font-normal text-grey text-base">
                                 When I'm not designing, you can find me exploring new cultures, trying out new recipes, or indulging in my 
                                 love for photography.
                             </div>
