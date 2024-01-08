@@ -49,11 +49,17 @@ const WorkPage = () => {
         link.click();
     }
 
+    const scrollToTop=()=>{
+        let scroll:any = document.getElementById("main")
+         const scrollUp:any = scroll.scrollTop = 0;
+         return scrollUp;
+    }
+
     return (
         <>
-            <div className="flex flex-col w-full h-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pt-5 lg:pt-12 pb-14">
+            <div className="flex flex-col w-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pt-5 lg:pt-12 pb-10 overflow-x-hidden">
                 <div className="flex flex-col h-full w-full">
-                    <div className="relative flex w-full h-fit">
+                    <div className="relative flex w-full">
                         <nav className="absolute flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
                             <div className="flex flex-col lg:hidden w-full justify-center items-end">
                                 <div onClick={slideToggle}
@@ -120,9 +126,9 @@ const WorkPage = () => {
                         </nav>
                     </div>
                     <div className="w-full h-16"/>
-                    <div id="main"
-                        className="flex w-full h-fit items-center my-2 gap-40">
-                        <div className={`inline-flex w-fit font-bold font-poppins text-skyblue text-xl lg:text-[40px] ${dynamicDesign} duration-300`}>
+                    <div
+                        className="flex w-full h-full items-center my-2 gap-40">
+                        <div className={`inline-flex bg-bgBlack w-fit font-bold font-poppins text-skyblue text-xl lg:text-[40px] ${dynamicDesign} duration-300`}>
                             Works
                         </div>
                         <div className="hidden lg:inline-flex pt-3 w-fit font-normal font-poppins text-lg text-white">
@@ -144,8 +150,8 @@ const WorkPage = () => {
                                     I have made a few things, here are some of my favorite's
                                 </div>
                                 <Tab.Panel>
-                                    <div className="flex flex-col w-full h-full items-center">
-                                        <div className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px] overflow-y-auto">
+                                    <div className="flex flex-col w-full lg:h-[500px] items-center overflow-hidden">
+                                        <div id="main" className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px] overflow-y-auto">
                                             <CardItemMobile 
                                                 picture="/Plugh.svg"
                                                 title="Plugh Mobile App"
@@ -190,7 +196,7 @@ const WorkPage = () => {
                         </Tab.Group>
                         <div className="hidden relative lg:flex lg:w-[120px]">
                             <div className="flex flex-col w-full h-full items-center justify-end">
-                                <Link href="#main"
+                                <Link href="#main" onClick={scrollToTop}
                                     className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
                                         <FaArrowUpLong className="text-skyblue text-2xl"/> 
                                 </Link>
