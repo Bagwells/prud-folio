@@ -158,6 +158,12 @@ const WorkPage = () => {
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/PlughMobile"
                                                 buttonclick={toggle} subtitle={"Logo"} subtitle2={"UIUX Design"} subtitle3={"Social"} subtitle4={"Mobile"}/>
+                                            <CardItemMobile
+                                                picture="/Componentgrid.svg"
+                                                title="Components & Cards"
+                                                description="Snapshot of admin dashboard and components"
+                                                link="/Components-card"
+                                                buttonclick={toggle} subtitle={"Cards"} subtitle2={"Components"} subtitle3={"Dashboard"} subtitle4={""}/>
                                              <CardItemMobile
                                                 picture="/LandingPage.svg"
                                                 title="Plugh"
@@ -182,12 +188,6 @@ const WorkPage = () => {
                                                 description="Responsive landing page for an agency, with the goal to bring innovation to business and brands."
                                                 link="/Velion"
                                                 buttonclick={toggle} subtitle={"Landing Page"} subtitle2={"UIUX Design"} subtitle3={""} subtitle4={""}/>
-                                            <CardItemMobile
-                                                picture="/Componentgrid.svg"
-                                                title="Components & Cards"
-                                                description="Snapshot of admin dashboard and components"
-                                                link="/Components-card"
-                                                buttonclick={toggle} subtitle={"Cards"} subtitle2={"Components"} subtitle3={"Dashboard"} subtitle4={""}/>
                                         </div>
                                     </div>
                                 </Tab.Panel>
