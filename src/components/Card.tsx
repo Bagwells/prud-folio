@@ -35,7 +35,7 @@ const CardItemMobile =(props:Card)=> {
                         className="w-full"
                         alt={""}                
                     />
-                    <div className={`w-full flex flex-col items-start ${colorChange} p-[18px] gap-3`}>
+                    <div className={`w-full flex flex-col items-start h-[150px] ${colorChange} p-[18px] gap-3`}>
                         <div className="inline-flex font-poppins font-semibold text-xl text-[#F2F2F2]">
                             {props?.title}
                         </div>

@@ -182,13 +182,48 @@ const WorkPage = () => {
                                                 description="Responsive landing page for an agency, with the goal to bring innovation to business and brands."
                                                 link="/Velion"
                                                 buttonclick={toggle} subtitle={"Landing Page"} subtitle2={"UIUX Design"} subtitle3={""} subtitle4={""}/>
+                                            <CardItemMobile
+                                                picture="/Componentgrid.svg"
+                                                title="Components & Cards"
+                                                description="Snapshot of admin dashboard and components"
+                                                link="/Components-card"
+                                                buttonclick={toggle} subtitle={"Cards"} subtitle2={"Components"} subtitle3={"Dashboard"} subtitle4={""}/>
                                         </div>
                                     </div>
                                 </Tab.Panel>
                                 <Tab.Panel>
-                                    <div className="flex flex-col w-full items-center">
-                                        <div className="w-fit grid grid-cols-1 md:grid-cols-2 gap-y-3.5 lg:gap-[18px]">
-                                            
+                                    <div className="flex flex-col w-full lg:h-[500px] items-center overflow-hidden">
+                                        <div id="main" className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px] overflow-y-auto">
+                                            <CardItemMobile 
+                                                picture="/Veliongrid.svg"
+                                                title="Velion"
+                                                description="A tech company that focuses on solving real world problems"
+                                                link="/VelionBrand"
+                                                buttonclick={toggle} subtitle={"Logo"} subtitle2={"Branding"} subtitle3={"Brand Guide"} subtitle4={"Agency"}/>
+                                             <CardItemMobile
+                                                picture="/Tazagrid.svg"
+                                                title="Taza"
+                                                description="Not your regular Jewel store"
+                                                link="/Taza"
+                                                buttonclick={toggle} subtitle={"Logo"} subtitle2={"Branding"} subtitle3={"Wears"} subtitle4={""}/>
+                                            <CardItemMobile 
+                                                picture="/Taza-beautygrid.svg"
+                                                title="Taza Beauty"
+                                                description="A testament to the power of self-expression through self-care."
+                                                link="/TazaBeauty"
+                                                buttonclick={toggle} subtitle={"Logo"} subtitle2={"Branding"} subtitle3={"Beauty"} subtitle4={""}/>
+                                            <CardItemMobile
+                                                picture="/ourcontinentgrid.svg"
+                                                title="OurKontinent"
+                                                description="Bringing change and impact to African Continent"
+                                                link="/OurKontinent"
+                                                buttonclick={toggle} subtitle={"Logo"} subtitle2={"Branding"} subtitle3={"Humanity"} subtitle4={""}/>
+                                            <CardItemMobile
+                                                picture="/Beebitesgrid.svg"
+                                                title="Beebites"
+                                                description="The Goodness in every bite"
+                                                link="/Beebites"
+                                                buttonclick={toggle} subtitle={"Logo"} subtitle2={"Branding"} subtitle3={"Food"} subtitle4={""}/>
                                         </div>
                                     </div>
                                 </Tab.Panel>

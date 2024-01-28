@@ -189,7 +189,38 @@ const WorkOverview =(props:any)=> {
                                         src={`${props?.image8}`}
                                         alt=""
                                     />
-
+                                    <img className="w-full" 
+                                        src={`${props?.image9}`}
+                                        alt=""
+                                    />
+                                    <img className="w-full" 
+                                        src={`${props?.image10}`}
+                                        alt=""
+                                    />
+                                    <img className="w-full" 
+                                        src={`${props?.image11}`}
+                                        alt=""
+                                    />
+                                    <img className="w-full" 
+                                        src={`${props?.image12}`}
+                                        alt=""
+                                    />
+                                    <img className="w-full" 
+                                        src={`${props?.image13}`}
+                                        alt=""
+                                    />
+                                    <img className="w-full" 
+                                        src={`${props?.image14}`}
+                                        alt=""
+                                    />
+                                    <img className="w-full" 
+                                        src={`${props?.image15}`}
+                                        alt=""
+                                    />
+                                    <img className="w-full" 
+                                        src={`${props?.image16}`}
+                                        alt=""
+                                    />
                                 </div>
                             </div>
                             <div className="hidden relative lg:flex lg:w-[120px]">
