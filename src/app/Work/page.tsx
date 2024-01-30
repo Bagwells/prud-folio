@@ -150,7 +150,7 @@ const WorkPage = () => {
                                     I have made a few things, here are some of my favorite's
                                 </div>
                                 <Tab.Panel>
-                                    <div className="flex flex-col w-full lg:h-[500px] items-center overflow-hidden">
+                                    <div className="flex flex-col w-full lg:h-[450px] items-center overflow-hidden">
                                         <div id="main" className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px] overflow-y-auto">
                                             <CardItemMobile 
                                                 picture="/Plugh.svg"
@@ -229,7 +229,7 @@ const WorkPage = () => {
                                 </Tab.Panel>
                             </Tab.Panels>
                         </Tab.Group>
-                        <div className="flex fixed flex-col w-fit h-fit top-[80%] left-[86%]">
+                        <div className="flex fixed flex-col w-fit h-fit top-[78%] left-[86%]">
                             <Link href="#main" onClick={scrollToTop}
                                 className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
                                     <FaArrowUpLong className="text-skyblue text-2xl"/> 
