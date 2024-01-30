@@ -229,7 +229,7 @@ const WorkPage = () => {
                                 </Tab.Panel>
                             </Tab.Panels>
                         </Tab.Group>
-                        <div className="flex fixed flex-col w-fit h-fit top-[70%] left-[86%]">
+                        <div className="flex fixed flex-col w-fit h-fit top-[80%] left-[86%]">
                             <Link href="#main" onClick={scrollToTop}
                                 className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
                                     <FaArrowUpLong className="text-skyblue text-2xl"/> 
