@@ -135,7 +135,7 @@ const WorkPage = () => {
                             I have made a few things, here are some of my favorite's
                         </div>
                     </div>
-                    <div className="w-full flex flex-col lg:flex-row lg:pl-10 lg:my-8">
+                    <div className="w-full flex flex-col lg:flex-row lg:pl-10 lg:pr-[120px] lg:my-8">
                         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
                             <Tab.List className={`flex lg:flex-col w-full lg:w-[200px] lg:ml-5 items-start gap-5 lg:gap-6 ${swipeLeftRev} ${swipeLeft} duration-500`}>
                                 <Tab className="flex w-full justify-center font-poppins font-normal text-xl md:text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
@@ -229,14 +229,12 @@ const WorkPage = () => {
                                 </Tab.Panel>
                             </Tab.Panels>
                         </Tab.Group>
-                        <div className="hidden relative lg:flex lg:w-[120px]">
-                            <div className="flex flex-col w-full h-full items-center justify-end">
-                                <Link href="#main" onClick={scrollToTop}
-                                    className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
-                                        <FaArrowUpLong className="text-skyblue text-2xl"/> 
-                                </Link>
-                            </div> 
-                        </div>
+                        <div className="flex fixed flex-col w-fit h-fit top-[70%] left-[86%]">
+                            <Link href="#main" onClick={scrollToTop}
+                                className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
+                                    <FaArrowUpLong className="text-skyblue text-2xl"/> 
+                            </Link>
+                        </div> 
                     </div>
                 </div>
             </div>

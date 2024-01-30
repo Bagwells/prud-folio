@@ -31,3 +31,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background:#00ADB5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+
+}
+

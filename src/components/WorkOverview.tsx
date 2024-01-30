@@ -128,7 +128,7 @@ const WorkOverview =(props:any)=> {
                             </div>
                         </div>
 
-                        <div className="flex w-full lg:pl-[120px]">
+                        <div className="flex w-full lg:px-[120px]">
                             <div className="flex flex-col w-full gap-6">
                                 <div className="flex flex-col gap-2.5">
                                     <div className="font-poppins font-semibold text-[#F2F2F2] text-[22px] lg:text-[26px]">
@@ -223,13 +223,11 @@ const WorkOverview =(props:any)=> {
                                     />
                                 </div>
                             </div>
-                            <div className="hidden relative lg:flex lg:w-[120px]">
-                                <div className="flex flex-col w-full h-full items-center justify-end">
-                                    <Link href="#main"
-                                        className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
-                                            <FaArrowUpLong className="text-skyblue text-2xl"/> 
-                                    </Link>
-                                </div> 
+                            <div className="flex fixed flex-col w-fit h-fit top-[80%] left-[86%]">
+                                <Link href="#main"
+                                    className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
+                                        <FaArrowUpLong className="text-skyblue text-2xl"/> 
+                                </Link>
                             </div>
                         </div>
                     </div>
