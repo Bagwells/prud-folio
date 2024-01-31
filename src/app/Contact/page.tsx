@@ -30,10 +30,11 @@ const Contact =()=> {
     }
     return(
         <>
-            <div className="flex flex-col w-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pt-5 lg:pt-12 pb-14">
-                <div className="flex flex-col h-full w-full">
-                    <div className="relative flex w-full h-fit">
-                        <nav className="absolute flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
+            <div className="flex flex-col w-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pb-14">
+                <div className="fixed inset-x-0 w-full h-14 bg-bgBlack z-50"/>
+                <div className="flex flex-col h-full w-full mt-12">
+                    <div className="fixed inset-0 top-12 w-full h-fit bg-bgBlack z-50 px-5 md:px-20 lg:px-[100px] 2xl:px-80">
+                        <nav className="flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
                             <div className="flex flex-col lg:hidden w-full justify-center items-end">
                                 <div onClick={slideToggle}
                                     className="flex w-fit items-center lg:hidden">

@@ -48,19 +48,19 @@ const WorkPage = () => {
         document.body.appendChild(link);
         link.click();
     }
-
     const scrollToTop=()=>{
-        let scroll:any = document.getElementById("main")
+        let scroll:any = document.getElementById("scroll")
          const scrollUp:any = scroll.scrollTop = 0;
          return scrollUp;
     }
 
     return (
         <>
-            <div className="flex flex-col w-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pt-5 lg:pt-12 pb-10 overflow-x-hidden">
-                <div className="flex flex-col h-full w-full">
-                    <div className="relative flex w-full">
-                        <nav className="absolute flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
+            <div id="main" className="flex flex-col w-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pb-10 overflow-x-hidden">
+                <div className="fixed inset-x-0 w-full h-14 bg-bgBlack z-50"/>
+                <div className="flex flex-col h-full w-full mt-12">
+                    <div className="fixed flex w-full inset-x-0 top-12 h-fit bg-bgBlack z-50 px-5 md:px-20 lg:px-[100px] 2xl:px-80">
+                        <nav className="flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
                             <div className="flex flex-col lg:hidden w-full justify-center items-end">
                                 <div onClick={slideToggle}
                                     className="flex w-fit items-center lg:hidden">
@@ -137,11 +137,11 @@ const WorkPage = () => {
                     </div>
                     <div className="w-full flex flex-col lg:flex-row lg:pl-10 lg:pr-[120px] lg:my-8">
                         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-                            <Tab.List className={`flex lg:flex-col w-full lg:w-[200px] lg:ml-5 items-start gap-5 lg:gap-6 ${swipeLeftRev} ${swipeLeft} duration-500`}>
-                                <Tab className="flex w-full justify-center font-poppins font-normal text-xl md:text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
+                            <Tab.List className={`flex lg:flex-col w-full lg:w-[200px] lg:pl-5 items-start gap-5 lg:gap-6 ${swipeLeftRev} ${swipeLeft} duration-500`}>
+                                <Tab className="flex w-full justify-center lg:justify-start font-poppins pl-2 font-normal text-lg md:text-2xl text-white ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px] outline-none">
                                     UIUX Design
                                 </Tab>
-                                <Tab className=" flex w-full justify-center font-poppins font-normal text-xl md:text-2xl text-white hover:ml-4 ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px]">
+                                <Tab className=" flex w-full justify-center lg:justify-start font-poppins pl-2 font-normal text-lg md:text-2xl text-white ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px] outline-none">
                                     Branding
                                 </Tab>
                             </Tab.List> 
@@ -151,7 +151,7 @@ const WorkPage = () => {
                                 </div>
                                 <Tab.Panel>
                                     <div className="flex flex-col w-full lg:h-[450px] items-center overflow-hidden">
-                                        <div id="main" className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px] overflow-y-auto">
+                                        <div id="scroll" className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px] overflow-y-auto">
                                             <CardItemMobile 
                                                 picture="/Plugh.svg"
                                                 title="Plugh Mobile App"
@@ -229,7 +229,7 @@ const WorkPage = () => {
                                 </Tab.Panel>
                             </Tab.Panels>
                         </Tab.Group>
-                        <div className="flex fixed flex-col w-fit h-fit top-[78%] left-[86%]">
+                        <div className="flex fixed flex-col w-fit h-fit top-[78%] left-[86%] z-50">
                             <Link href="#main" onClick={scrollToTop}
                                 className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
                                     <FaArrowUpLong className="text-skyblue text-2xl"/> 

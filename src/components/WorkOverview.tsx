@@ -42,10 +42,11 @@ const WorkOverview =(props:any)=> {
     return(
         <>
             <div className="w-full h-full overflow-hidden">
-                <div className="flex w-full h-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pt-12 pb-14 overflow-hidden">
+                <div className="flex w-full h-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pb-14 overflow-hidden">
+                    <div className="fixed inset-x-0 w-full h-14 bg-bgBlack z-50"/>
                     <div className="flex flex-col w-full">
-                        <div className="relative flex w-full h-fit">
-                            <nav className="absolute flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
+                        <div className="fixed flex w-[100vw] inset-x-0 top-12 h-fit bg-bgBlack z-50 px-5 md:px-20 lg:px-[100px] 2xl:px-80">
+                            <nav className="flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
                                 <div className="flex flex-col lg:hidden w-full justify-center items-end">
                                     <div onClick={slideToggle}
                                         className="flex w-fit items-center lg:hidden">
@@ -117,7 +118,7 @@ const WorkOverview =(props:any)=> {
                         </div>         
                         <div className="flex lg-hidden w-full h-16"/>             
                         <div id="main"
-                            className="flex w-full h-fit items-center my-2 gap-6 overflow-hidden">
+                            className="fixed flex w-full h-20 inset-x-0 inset-y-[90px] items-center my-2 gap-6 overflow-hidden z-30 bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80">
                             <Link href="/Work">
                                 <div className={`flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F] ${buttonSwipe} motion-reduce:transition-opacity ease-in delay-500`}>
                                     <FaArrowLeftLong className="text-skyblue text-2xl"/>
@@ -128,7 +129,7 @@ const WorkOverview =(props:any)=> {
                             </div>
                         </div>
 
-                        <div className="flex w-full lg:px-[120px]">
+                        <div className="flex mt-20 w-full lg:px-[120px]">
                             <div className="flex flex-col w-full gap-6">
                                 <div className="flex flex-col gap-2.5">
                                     <div className="font-poppins font-semibold text-[#F2F2F2] text-[22px] lg:text-[26px]">
@@ -223,7 +224,7 @@ const WorkOverview =(props:any)=> {
                                     />
                                 </div>
                             </div>
-                            <div className="flex fixed flex-col w-fit h-fit top-[80%] left-[86%]">
+                            <div className="flex fixed flex-col w-fit h-fit top-[80%] left-[82%] md:left-[86%]">
                                 <Link href="#main"
                                     className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
                                         <FaArrowUpLong className="text-skyblue text-2xl"/> 

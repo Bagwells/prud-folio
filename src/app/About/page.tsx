@@ -47,9 +47,10 @@ const AboutPage = ()=> {
     return (
         <>
             <div className="flex w-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pt-5 md:pt-12 pb-14 overflow-hidden">
-                <div className="flex flex-col w-full gap-4">
-                    <div className="relative flex w-full h-fit">
-                        <nav className="absolute flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
+                <div className="fixed inset-0 w-full h-14 bg-bgBlack z-50"/>
+                <div className="flex flex-col w-full gap-2">
+                    <div className="fixed inset-x-0 flex w-full h-fit bg-bgBlack z-50 px-5 md:px-20 lg:px-[100px] 2xl:px-80">
+                        <nav className="flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
                             <div className="flex flex-col lg:hidden w-full justify-center items-end">
                                 <div onClick={slideToggle}
                                     className="flex w-fit items-center lg:hidden">
@@ -121,9 +122,14 @@ const AboutPage = ()=> {
                                 About
                             </div>
                             <div className="flex flex-col items-center gap-4">
-                                <div className="flex relative">
+                                <div className="flex flex-col relative gap-4">
                                     <img className="w-[236px] md:w-[468px]" src="/Aboutme.svg" alt=""/>
-                                    <div className="absolute flex flex-col left-[80%] lg:left-[70%] top-10 lg:gap-8 ">
+                                    <Link href="/Contact" className="hidden lg:flex items-center justify-center w-full px-4 py-2 font-poppins font-normal 
+                                        text-light text-[22px] visited:border-opacity-20 border hover:border-2 border-white"
+                                    >
+                                        Contact Me
+                                    </Link>
+                                    <div className="absolute flex flex-col left-[72%] lg:left-[75%] top-8 lg:top-10 lg:gap-8 ">
                                         <div className="inline-flex invisible lg:visible font-poppins font-bold text-light text-[35px] text-left tracking-[7px] w-fit md:max-w-52">
                                             Prudence Francis
                                         </div>
@@ -165,11 +171,6 @@ const AboutPage = ()=> {
                             </div>
                         </div>
                     </div>
-                    <Link href="/Contact" className="flex items-center justify-center w-full md:w-[294px] px-4 py-2 lg:ml-48 font-poppins font-normal 
-                        text-light text-[22px] visited:border-opacity-20 border hover:border-2 border-white"
-                    >
-                        Contact Me
-                    </Link>
                 </div>
             </div>
             <Footer/>

@@ -52,15 +52,15 @@ export default function HomePage() {
       
   return (
     <>
-    <div className="flex flex-col w-full bg-bgBlack px-5 md:px-20 2xl:px-80 py-5 md:py-12 overflow-hidden">
+    <div className="flex flex-col w-full h-[100vh] bg-bgBlack px-5 md:px-20 2xl:px-80 py-5 md:py-12 overflow-hidden">
 
-        <div className={`fixed left-[-180px] md:left-[-140px] lg:-left-20 z-0 md:z-50 flex items-center rotate-90 ${swipeUp} ${swipeUpRev} duration-300 gap-2 `}>
+        <div className={`fixed left-[-180px] md:left-[-140px] lg:-left-[120px] z-0 md:z-50 flex items-center rotate-90 ${swipeUp} ${swipeUpRev} duration-300 gap-2 `}>
             <div className="w-80 h-0.5 bg-grey" />
             <div className="flex gap-2 cursor-pointer">
                 <a href="">
                     <RiTwitterXFill className="text-xl md:text-[32px] text-grey -rotate-90"/>
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/francis-prudence-8a407a2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
                     <RiLinkedinBoxFill className="text-xl md:text-[32px] text-grey -rotate-90"/>
                 </a>
                 <a href="">
