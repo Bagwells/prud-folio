@@ -115,7 +115,7 @@ const AboutPage = ()=> {
                             </div>
                         </nav>
                     </div>
-                    <div className="flex lg-hidden w-full h-5"/>
+                    <div className="flex lg-hidden w-full h-7"/>
                     <div className="flex flex-col lg:flex-row w-full gap-4 lg:gap-10 pt-6">
                         <div className="flex flex-col lg:flex-row lg:flex-[0.6] items-start">
                             <div className={`flex lg:h-full w-fit font-bold font-poppins text-skyblue text-[40px] ${dynamicDesign} ${dynamicDesignRev} duration-300 z-10`}>

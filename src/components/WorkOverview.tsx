@@ -6,6 +6,8 @@ import { FaArrowLeftLong, FaArrowUpLong } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { IoIosCloseCircle } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { RiLoader2Line} from "react-icons/ri";
+
 
 
 
@@ -38,6 +40,18 @@ const WorkOverview =(props:any)=> {
         document.body.appendChild(link);
         link.click();
     }
+
+    const [load, setLoad] = useState(false);
+    const LoadEffect = load? "hidden" : "flex";
+    const loadImage = load? "grid" : "hidden";
+
+    useEffect(()=>{
+        setTimeout(()=> {
+            setLoad(true);
+        },4000)
+    },[])
+
+
 
     return(
         <>
@@ -139,22 +153,24 @@ const WorkOverview =(props:any)=> {
                                         {props?.description}
                                     </div>
                                     <div className="flex gap-2.5">
-                                        <div className="flex items-center bg-textback p-2 rounded-[5px] h-[20px]">
+                                        <div className={`flex items-center bg-textback p-2 rounded-[5px] h-[20px]`}>
                                             <div className="font-poppins font-normal text-skyblue text-xs">{props?.subtitle}</div>
                                         </div>
-                                        <div className="flex items-center bg-textback p-2 rounded-[5px] h-[20px]">
+                                        <div className={`flex items-center bg-textback p-2 rounded-[5px] h-[20px]`}>
                                             <div className="font-poppins font-normal text-skyblue text-xs">{props?.subtitle2}</div>
                                         </div>
-                                        <div className="flex items-center bg-textback p-2 rounded-[5px] h-[20px]">
+                                        <div className={`flex items-center bg-textback p-2 rounded-[5px] h-[20px]`}>
                                             <div className="font-poppins font-normal text-skyblue text-xs">{props?.subtitle3}</div>
                                         </div>
-                                        <div className="flex items-center bg-textback p-2 rounded-[5px] h-[20px]">
+                                        <div className={`flex items-center bg-textback p-2 rounded-[5px] h-[20px]`}>
                                             <div className="font-poppins font-normal text-skyblue text-xs">{props?.subtitle4}</div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div className="grid w-full grid-cols-1 gap-[22px]">
+                                <div className={`${LoadEffect} h-[600px] w-full items-center justify-center transition-all ease-out`}>
+                                    <RiLoader2Line className="animation-spin text-2xl"/>
+                                </div>
+                                <div className={`${loadImage} w-full grid-cols-1 gap-[22px] transition-all ease-in`}>
                                     <img className="w-full" 
                                         src={`${props?.image1}`}
                                         alt=""

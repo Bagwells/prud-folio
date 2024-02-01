@@ -128,7 +128,7 @@ const WorkPage = () => {
                     <div className="w-full h-16"/>
                     <div
                         className="flex w-full h-full items-center my-2 gap-40">
-                        <div className={`inline-flex bg-bgBlack w-fit font-bold font-poppins text-skyblue text-xl lg:text-[40px] ${dynamicDesign} duration-300`}>
+                        <div className={`inline-flex bg-bgBlack w-fit font-bold font-poppins text-skyblue text-xl lg:text-[40px] duration-300`}>
                             Works
                         </div>
                         <div className="hidden lg:inline-flex pt-3 w-fit font-normal font-poppins text-lg text-white">
@@ -137,11 +137,11 @@ const WorkPage = () => {
                     </div>
                     <div className="w-full flex flex-col lg:flex-row lg:pl-10 lg:pr-[120px] lg:my-8">
                         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-                            <Tab.List className={`flex lg:flex-col w-full lg:w-[200px] lg:pl-5 items-start gap-5 lg:gap-6 ${swipeLeftRev} ${swipeLeft} duration-500`}>
-                                <Tab className="flex w-full justify-center lg:justify-start font-poppins pl-2 font-normal text-lg md:text-2xl text-white ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px] outline-none">
+                            <Tab.List className={`flex lg:flex-col w-full lg:w-[200px] lg:pl-5 items-start gap-5 lg:gap-6 duration-500`}>
+                                <Tab className="flex w-full justify-center lg:justify-start font-poppins pl-2 font-normal text-lg md:text-2xl text-white hover:text-skyblue  ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px] outline-none">
                                     UIUX Design
                                 </Tab>
-                                <Tab className=" flex w-full justify-center lg:justify-start font-poppins pl-2 font-normal text-lg md:text-2xl text-white ui-selected:ml-4 ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px] outline-none">
+                                <Tab className=" flex w-full justify-center lg:justify-start font-poppins pl-2 font-normal text-lg md:text-2xl text-white hover:text-skyblue ui-selected:text-skyblue ui-selected:border-b-skyblue ui-selected:border-b-[7px] outline-none">
                                     Branding
                                 </Tab>
                             </Tab.List> 
@@ -163,7 +163,7 @@ const WorkPage = () => {
                                                 title="Components & Cards"
                                                 description="Snapshot of admin dashboard and components"
                                                 link="/Components-card"
-                                                buttonclick={toggle} subtitle={"Cards"} subtitle2={"Components"} subtitle3={"Dashboard"} subtitle4={""}/>
+                                                buttonclick={toggle} subtitle={"Cards"} subtitle2={"Components"} subtitle3={"Dashboard"} subtitle4={""} />
                                              <CardItemMobile
                                                 picture="/LandingPage.svg"
                                                 title="Plugh"
