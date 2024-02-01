@@ -129,23 +129,23 @@ export default function HomePage() {
                             HELLO
                         </div>
                     </div>
-                    <div className={`w-fit hidden gap-2 lg:flex flex-col`}>
+                    <div className={`w-fit hidden gap-4 lg:flex flex-col`}>
                         <span onClick={toggle} 
-                            className="font-poppins font-bold text-white text-[40px] hover:text-skyblue cursor-pointer">
-                                <Link href="/About">
-                                    About
-                                </Link> 
+                            className="font-poppins font-bold text-white text-4xl hover:text-skyblue cursor-pointer">
+                            <Link href="/About">
+                                About
+                            </Link> 
                         </span>
                         <span onClick={toggle} 
-                            className="font-poppins font-bold text-white text-[40px] hover:text-skyblue cursor-pointer">
-                                <Link href="/Work">
-                                    Works
-                                </Link> 
+                            className="font-poppins font-bold text-white text-4xl hover:text-skyblue cursor-pointer">
+                            <Link href="/Work">
+                                Works
+                            </Link> 
                         </span>
-                        <span onClick={toggle} className="font-poppins font-bold text-white text-[40px] hover:text-skyblue cursor-pointer">
-                                <Link href="/Contact">
-                                    Contact
-                                </Link> 
+                        <span onClick={toggle} className="font-poppins font-bold text-white text-4xl hover:text-skyblue cursor-pointer">
+                            <Link href="/Contact">
+                                Contact
+                            </Link> 
                         </span>
                     </div>
                 </div>
