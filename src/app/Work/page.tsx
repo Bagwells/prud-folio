@@ -145,7 +145,7 @@ const WorkPage = () => {
                                     Branding
                                 </Tab>
                             </Tab.List> 
-                            <Tab.Panels className="lg:ml-12 h-full gap-4 pb-4 lg:pb-0 px-3.5">
+                            <Tab.Panels className="lg:ml-12 h-full gap-4 pb-4 lg:pb-0 sm:px-3.5">
                                 <div className="lg:hidden inline-flex w-fit font-normal font-poppins text-base text-white mb-2">
                                     I have made a few things, here are some of my favorite's
                                 </div>

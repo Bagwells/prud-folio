@@ -52,24 +52,24 @@ const CardItemMobile =(props:Card)=> {
                         className={`${loadImage} w-full`}
                         alt={""}                
                     />
-                    <div className={`w-full flex flex-col items-start justify-between h-[150px] ${colorChange} p-[18px] gap-3`}>
+                    <div className={`w-full flex flex-col items-start justify-between h-[150px] ${colorChange} p-3 md:p-[18px] gap-3`}>
                         <div className={`${textEffect} inline-flex font-poppins font-semibold text-xl text-[#F2F2F2]`}>
                             {props?.title}
                         </div>
-                        <div className={`${textEffect} inline-flex font-poppins font-normal text-sm text-[#ABABAB]`}>
+                        <div className={`${textEffect} inline-flex font-poppins font-normal text-xs sm:text-sm text-[#ABABAB]`}>
                             {props?.description}
                         </div>
                         <div className="flex gap-2.5">
-                            <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-xs`}>
+                            <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-[8px] sm:text-xs`}>
                                 {props?.subtitle}
                             </div>
-                            <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-xs`}>
+                            <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-[8px] sm:text-xs`}>
                                 {props?.subtitle2}
                             </div>
-                            <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-xs`}>
+                            <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-[8px] sm:text-xs`}>
                                 {props?.subtitle3}
                             </div>
-                            <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-xs`}>
+                            <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-[8px] sm:text-xs`}>
                                 {props?.subtitle4}
                             </div>
                         </div>
