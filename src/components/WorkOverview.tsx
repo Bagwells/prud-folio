@@ -167,7 +167,7 @@ const WorkOverview =(props:any)=> {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={`${LoadEffect} h-[600px] w-full items-center justify-center transition-all ease-out`}>
+                                <div className={`${LoadEffect} h-[500px] w-full items-center justify-center transition-all ease-out`}>
                                     <RiLoader2Line className="animation-spin text-2xl"/>
                                 </div>
                                 <div className={`${loadImage} w-full grid-cols-1 gap-[22px] transition-all ease-in`}>
