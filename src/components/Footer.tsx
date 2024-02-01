@@ -23,7 +23,7 @@ const Footer = ()=> {
                         </span>
                         <span className="font-inter font-normal text-base text-white">
                             <a href="">
-                                Behance
+                                Dribbble
                             </a>
                         </span>                        
                     </div>

@@ -2,10 +2,10 @@
 import { HiOutlineDownload } from "react-icons/hi";
 import Link from "next/link";
 import { RiTwitterXFill , RiInstagramFill, RiLinkedinBoxFill } from "react-icons/ri";
-import { FaSquareBehance } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosCloseCircle } from "react-icons/io";
 import { useEffect, useState } from "react"
+import { PiDribbbleLogoFill } from "react-icons/pi";
 
 export default function HomePage() {
 
@@ -52,28 +52,28 @@ export default function HomePage() {
       
   return (
     <>
-    <div className="flex flex-col w-full h-[100vh] bg-bgBlack px-5 md:px-20 2xl:px-80 py-5 md:py-12 overflow-hidden">
-
-        <div className={`fixed left-[-180px] md:left-[-140px] lg:-left-[120px] z-0 md:z-50 flex items-center rotate-90 ${swipeUp} ${swipeUpRev} duration-300 gap-2 `}>
-            <div className="w-80 h-0.5 bg-grey" />
+    <div className="flex flex-col w-full lg:h-[100vh] bg-bgBlack px-5 md:px-20 2xl:px-80 py-5 md:py-12 overflow-hidden">
+        <div className={`fixed left-[-180px] md:left-[-140px] lg:-left-[120px] z-30 md:z-50 flex items-center rotate-90 ${swipeUp} ${swipeUpRev} duration-300 gap-2 `}>
+            <div className="w-80 h-0.5 bg-grey"/>
             <div className="flex gap-2 cursor-pointer">
-                <a href="">
+                <a href="https://twitter.com/Francisprudenc" target="_blank" rel="noopener noreferrer">
                     <RiTwitterXFill className="text-xl md:text-[32px] text-grey -rotate-90"/>
                 </a>
-                <a href="https://www.linkedin.com/in/francis-prudence-8a407a2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                <a href="https://www.linkedin.com/in/francis-prudence-8a407a2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
                     <RiLinkedinBoxFill className="text-xl md:text-[32px] text-grey -rotate-90"/>
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/prud.ence.fa?igsh=a216eHEzeHFocDJh&utm_source=qr" target="_blank" rel="noopener noreferrer">
                     <RiInstagramFill className="text-xl md:text-[32px] text-grey -rotate-90"/>
                 </a>
-                <a href="">
-                    <FaSquareBehance className="text-xl md:text-[32px] text-grey -rotate-90"/>
+                <a href="https://dribbble.com/pruddence" target="_blank" rel="noopener noreferrer">
+                    <PiDribbbleLogoFill className="text-xl md:text-[32px] text-grey -rotate-90"/>
                 </a>
             </div>
         </div>
+        <div className="fixed inset-0 w-full h-14 bg-bgBlack z-20"/>
         <div className="flex flex-col w-full">
-            <div className="relative flex w-full h-fit">
-                <nav className={`absolute flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 z-50 md:z-0`}>
+            <div className="fixed inset-x-0 flex w-full h-fit bg-bgBlack z-50 px-5 md:px-20 lg:px-[100px] 2xl:px-80">
+                <nav className={`flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 z-50 md:z-0`}>
                     <div className={`flex flex-col w-full justify-center items-end`}>
                         {/* hamburger menu */}
                         <div onClick={slideToggle}
@@ -82,11 +82,33 @@ export default function HomePage() {
                         </div>
                         <div className={`flex flex-col w-full transition-[height] ease-out ${height} delay-75 duration-500 justify-center items-end gap-6 overflow-hidden`}>
                             <IoIosCloseCircle onClick={slideToggle} className={`text-3xl text-white motion-reduce:transition-all ease-in-out duration-500 ${designShift2}`}/>
-                                <div className="flex flex-col w-full items-center px-2.5 py-10">    
+                                <div className="flex flex-col w-full items-center px-2.5 py-10  gap-10">    
                                     <div onClick={resumeDownload} className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
                                         <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
                                             RESUME <HiOutlineDownload className="text-xl"/>
                                         </div>
+                                    </div>
+                                    <div className="flex w-full flex-col gap-5 items-center">
+                                        <span className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                            <Link href="/Home">
+                                                Home
+                                            </Link> 
+                                        </span>
+                                        <span className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                            <Link href="/About">
+                                                About
+                                            </Link> 
+                                        </span>
+                                        <span className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                            <Link href="/Work">
+                                                Works
+                                            </Link> 
+                                        </span>
+                                        <span className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
+                                            <Link href="/Contact">
+                                                Contact
+                                            </Link> 
+                                        </span>
                                     </div>
                                 </div>
                         </div>
@@ -158,7 +180,7 @@ export default function HomePage() {
                 </div>
             </div>
         </div>
-        <div className={`w-fit flex lg:hidden flex-col ml-8 md:ml-12 mt-5 transition-all ${swipeLeft} ${swipeLeftRev} duration-300`}>
+        <div className={`w-fit flex lg:hidden flex-col ml-8 md:ml-12 mt-3 transition-all ${swipeLeft} ${swipeLeftRev} duration-300`}>
             <span onClick={toggle} 
                 className="font-poppins font-bold text-white text-[40px] hover:text-skyblue cursor-pointer">
                     <Link href="/About">

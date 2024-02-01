@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { RiBehanceFill, RiLinkedinBoxFill, RiTwitterXLine } from "react-icons/ri";
 import Footer from "@/components/Footer";
+import { PiDribbbleLogoFill } from "react-icons/pi";
 
 
 const Contact =()=> {
@@ -44,9 +45,9 @@ const Contact =()=> {
                                     <IoIosCloseCircle onClick={slideToggle} className={`text-3xl text-white motion-reduce:transition-all ease-in-out duration-500 ${designShift2}`}/>
                                         <div className="flex flex-col w-full items-center px-2.5 py-10  gap-10">    
                                             <div onClick={resumeDownload} className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
-                                                    <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
-                                                        RESUME <HiOutlineDownload className="text-xl"/>
-                                                    </div>
+                                                <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
+                                                    RESUME <HiOutlineDownload className="text-xl"/>
+                                                </div>
                                             </div>
                                             <div className="flex w-full flex-col gap-5 items-center">
                                                 <span className="inline-flex font-poppins font-medium text-white text-base hover:text-skyblue cursor-pointer">
@@ -135,19 +136,19 @@ const Contact =()=> {
                             </div>
                             <div className="flex flex-col gap-4">
                                 <div className="inline-flex font-Sofia font-normal text-xl">
-                                    <a href="mailto:prudence.fran.ay@gmail.com">
+                                    <a href="mailto:prudence.fran.ay@gmail.com" target="_blank" rel="noopener noreferrer">
                                         prudence.fran.ay@gmail.com
                                     </a>
                                 </div>
                                 <span className="flex items-center gap-5">
-                                    <a href="">
+                                    <a href="https://www.instagram.com/prud.ence.fa?igsh=a216eHEzeHFocDJh&utm_source=qr" target="_blank" rel="noopener noreferrer">
                                         <RxInstagramLogo className="text-xl md:text-[36px] text-white"/>
                                     </a>
-                                    <a href="">
+                                    <a href="https://twitter.com/Francisprudenc" target="_blank" rel="noopener noreferrer">
                                         <RiTwitterXLine className="text-xl md:text-[36px] text-white"/>
                                     </a>
-                                    <a href="">
-                                        <RiBehanceFill className="text-xl md:text-[40px] text-white"/>
+                                    <a href="https://dribbble.com/pruddence" target="_blank" rel="noopener noreferrer">
+                                        <PiDribbbleLogoFill className="text-xl md:text-[40px] text-white"/>
                                     </a>
                                     <a href="https://www.linkedin.com/in/francis-prudence-8a407a2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
                                         <RiLinkedinBoxFill className="text-xl md:text-[40px] text-white"/>
