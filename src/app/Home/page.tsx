@@ -131,18 +131,18 @@ export default function HomePage() {
                     </div>
                     <div className={`w-fit hidden gap-4 lg:flex flex-col`}>
                         <span onClick={toggle} 
-                            className="font-poppins font-bold text-white text-4xl hover:text-skyblue cursor-pointer">
+                            className="font-poppins font-bold text-white text-4xl xl:text-[40px] hover:text-skyblue cursor-pointer">
                             <Link href="/About">
                                 About
                             </Link> 
                         </span>
                         <span onClick={toggle} 
-                            className="font-poppins font-bold text-white text-4xl hover:text-skyblue cursor-pointer">
+                            className="font-poppins font-bold text-white text-4xl xl:text-[40px] hover:text-skyblue cursor-pointer">
                             <Link href="/Work">
                                 Works
                             </Link> 
                         </span>
-                        <span onClick={toggle} className="font-poppins font-bold text-white text-4xl hover:text-skyblue cursor-pointer">
+                        <span onClick={toggle} className="font-poppins font-bold text-white text-4xl xl:text-[40px] hover:text-skyblue cursor-pointer">
                             <Link href="/Contact">
                                 Contact
                             </Link> 
