@@ -122,7 +122,7 @@ export default function HomePage() {
             </div>
             <div className="flex lg-hidden w-full h-10 md:h-20"/>
             <div className="flex flex-col pl-8 md:pl-12 lg:pl-0 lg:flex-row w-full lg:gap-10">
-                <div className={`flex flex-col pt-5 lg:w-[75%] lg:pl-14 gap-10 ${swipeLeft} ${swipeLeftRev} duration-300`}>
+                <div className={`flex flex-col pt-5 lg:w-[75%] lg:pl-14 gap-[36px] ${swipeLeft} ${swipeLeftRev} duration-300`}>
                     <div className="flex flex-col lg:flex-row">
                         <img className="w-[151px] md:w-[224px]" src="/Profile.svg" alt=""/>
                         <div className="inline-flex my-2 font-poppins font-bold text-Gray text-5xl md:text-6xl xl:text-[80px] mix-blend-screen opacity-20">
