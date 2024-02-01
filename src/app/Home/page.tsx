@@ -52,7 +52,7 @@ export default function HomePage() {
       
   return (
     <>
-    <div className="flex flex-col w-full lg:h-[100vh] bg-bgBlack px-5 md:px-20 2xl:px-80 py-5 md:py-12 overflow-hidden">
+    <div className="flex flex-col w-full lg:h-[100vh] bg-bgBlack px-5 md:px-20 2xl:px-80 py-5 md:py-10 overflow-hidden">
         <div className={`fixed left-[-180px] md:left-[-140px] lg:-left-[120px] z-30 md:z-50 flex items-center rotate-90 ${swipeUp} ${swipeUpRev} duration-300 gap-2 `}>
             <div className="w-80 h-0.5 bg-grey"/>
             <div className="flex gap-2 cursor-pointer">
@@ -122,14 +122,14 @@ export default function HomePage() {
             </div>
             <div className="flex lg-hidden w-full h-10 md:h-20"/>
             <div className="flex flex-col pl-8 md:pl-12 lg:pl-0 lg:flex-row w-full lg:gap-10">
-                <div className={`flex flex-col pt-5 lg:w-[75%] lg:pl-14 gap-16 ${swipeLeft} ${swipeLeftRev} duration-300`}>
+                <div className={`flex flex-col pt-5 lg:w-[75%] lg:pl-14 gap-10 ${swipeLeft} ${swipeLeftRev} duration-300`}>
                     <div className="flex flex-col lg:flex-row">
                         <img className="w-[151px] md:w-[224px]" src="/Profile.svg" alt=""/>
                         <div className="inline-flex my-2 font-poppins font-bold text-Gray text-5xl md:text-6xl xl:text-[80px] mix-blend-screen opacity-20">
                             HELLO
                         </div>
                     </div>
-                    <div className={`w-fit hidden gap-[10px] lg:flex flex-col`}>
+                    <div className={`w-fit hidden gap-2 lg:flex flex-col`}>
                         <span onClick={toggle} 
                             className="font-poppins font-bold text-white text-[40px] hover:text-skyblue cursor-pointer">
                                 <Link href="/About">
