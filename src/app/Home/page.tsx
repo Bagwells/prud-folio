@@ -28,7 +28,7 @@ export default function HomePage() {
 
     useEffect(()=> {
         setDesignRev(true)
-    })
+    },[])
 
 
     const [slideShow, setSlideShow] = useState(false);
@@ -80,8 +80,8 @@ export default function HomePage() {
                             className="flex w-fit items-center lg:hidden">
                             <RxHamburgerMenu className={`text-white text-[34px] motion-reduce:transition-all duration-500 ${designShift}`} />
                         </div>
-                        <div className={`flex flex-col w-full transition-[height] ease-out ${height} delay-75 duration-500 justify-center items-end gap-6 overflow-hidden`}>
-                            <IoIosCloseCircle onClick={slideToggle} className={`text-3xl text-white motion-reduce:transition-all ease-in-out duration-500 ${designShift2}`}/>
+                        <div className={`flex flex-col w-full transition-[height] ease-in-out ${height} delay-75 duration-500 justify-center items-end gap-6 overflow-hidden`}>
+                            <IoIosCloseCircle onClick={slideToggle} className={`text-3xl text-white transition-all ease-in-out duration-500 ${designShift2}`}/>
                                 <div className="flex flex-col w-full items-center px-2.5 py-10  gap-10">    
                                     <div onClick={resumeDownload} className="flex w-fit p-2.5 items-center justify-center cursor-pointer">
                                         <div className="inline-flex gap-2.5 font-poppins font-semibold text-sm text-white hover:text-skyblue items-center ">
@@ -122,14 +122,14 @@ export default function HomePage() {
             </div>
             <div className="flex lg-hidden w-full h-10 md:h-20"/>
             <div className="flex flex-col pl-8 md:pl-12 lg:pl-0 lg:flex-row w-full lg:gap-10">
-                <div className={`flex flex-col pt-5 lg:w-[75%] lg:pl-14 gap-20 ${swipeLeft} ${swipeLeftRev} duration-300`}>
+                <div className={`flex flex-col pt-5 lg:w-[75%] lg:pl-14 gap-16 ${swipeLeft} ${swipeLeftRev} duration-300`}>
                     <div className="flex flex-col lg:flex-row">
                         <img className="w-[151px] md:w-[224px]" src="/Profile.svg" alt=""/>
                         <div className="inline-flex my-2 font-poppins font-bold text-Gray text-5xl md:text-6xl xl:text-[80px] mix-blend-screen opacity-20">
                             HELLO
                         </div>
                     </div>
-                    <div className={`w-fit hidden gap-4 lg:flex flex-col`}>
+                    <div className={`w-fit hidden gap-[10px] lg:flex flex-col`}>
                         <span onClick={toggle} 
                             className="font-poppins font-bold text-white text-[40px] hover:text-skyblue cursor-pointer">
                                 <Link href="/About">
