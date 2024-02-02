@@ -59,7 +59,7 @@ const WorkOverview =(props:any)=> {
                 <div className="flex w-full h-full bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80 pb-14 overflow-hidden">
                     <div className="fixed inset-x-0 w-full h-14 bg-bgBlack z-50"/>
                     <div className="flex flex-col w-full">
-                        <div className="fixed flex w-[100vw] inset-x-0 top-12 h-fit bg-bgBlack z-50 px-5 md:px-20 lg:px-[100px] 2xl:px-80">
+                        <div className="fixed flex w-[100vw] inset-x-0 top-8 md:top-12 h-fit bg-bgBlack z-50 px-5 md:px-20 lg:px-[100px] 2xl:px-80">
                             <nav className="flex w-full bg-navBlack px-2.5 md:px-8 lg:px-[120px] py-2.5 items-center z-50">
                                 <div className="flex flex-col lg:hidden w-full justify-center items-end">
                                     <div onClick={slideToggle}
@@ -132,13 +132,13 @@ const WorkOverview =(props:any)=> {
                         </div>         
                         <div className="flex lg-hidden w-full h-16"/>             
                         <div id="main"
-                            className="fixed flex w-full h-20 inset-x-0 inset-y-[90px] items-center my-2 gap-6 overflow-hidden z-30 bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80">
+                            className="fixed flex w-full h-12 md:h-20 inset-x-0 inset-y-[78px] md:inset-y-[90px] items-center my-2 gap-6 overflow-hidden z-30 bg-bgBlack px-5 md:px-20 lg:px-[100px] 2xl:px-80">
                             <Link href="/Work">
-                                <div className={`flex w-[53px] items-center justify-center h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F] ${buttonSwipe} motion-reduce:transition-opacity ease-in delay-500`}>
-                                    <FaArrowLeftLong className="text-skyblue text-2xl"/>
+                                <div className={`flex w-[31px] h-[31px] md:w-[53px] items-center justify-center md:h-[52px] rounded-full bg-[#0C0D0F] ${buttonSwipe} motion-reduce:transition-opacity ease-in delay-500`}>
+                                    <FaArrowLeftLong className="text-skyblue text-base md:text-2xl"/>
                                 </div>
                             </Link>
-                            <div className={`inline-flex w-fit font-bold font-poppins text-skyblue text-[40px] ${swipe} duration-300`}>
+                            <div className={`inline-flex w-fit font-bold font-poppins text-skyblue text-xl md:text-[40px] ${swipe} duration-300`}>
                                 Works
                             </div>
                         </div>
@@ -149,7 +149,7 @@ const WorkOverview =(props:any)=> {
                                     <div className="font-poppins font-semibold text-[#F2F2F2] text-[22px] lg:text-[26px]">
                                         {props?.title}
                                     </div>
-                                    <div className="font-poppins font-normal text-[#F2F2F2] text-base">
+                                    <div className="font-poppins font-normal text-[#F2F2F2] text-sm md:text-base">
                                         {props?.description}
                                     </div>
                                     <div className="flex gap-2.5">
@@ -159,12 +159,12 @@ const WorkOverview =(props:any)=> {
                                         <div className={`flex items-center bg-textback p-2 rounded-[5px] h-[20px]`}>
                                             <div className="font-poppins font-normal text-skyblue text-xs">{props?.subtitle2}</div>
                                         </div>
-                                        <div className={`flex items-center bg-textback p-2 rounded-[5px] h-[20px]`}>
+                                        {props?.subtitle3 ? <div className={`flex items-center bg-textback p-2 rounded-[5px] h-[20px]`}>
                                             <div className="font-poppins font-normal text-skyblue text-xs">{props?.subtitle3}</div>
-                                        </div>
-                                        <div className={`flex items-center bg-textback p-2 rounded-[5px] h-[20px]`}>
+                                        </div>: null}
+                                        {props?.subtitle4 ? <div className={`flex items-center bg-textback p-2 rounded-[5px] h-[20px]`}>
                                             <div className="font-poppins font-normal text-skyblue text-xs">{props?.subtitle4}</div>
-                                        </div>
+                                        </div>: null}
                                     </div>
                                 </div>
                                 <div className={`${LoadEffect} h-[600px] w-full items-center justify-center transition-all ease-out`}>
@@ -190,54 +190,59 @@ const WorkOverview =(props:any)=> {
                                         src={`${props?.image4}`}
                                         alt=""
                                     />
-                                    <img className="w-full" 
+                                    {props?.image5 ? <img className="w-full" 
                                         src={`${props?.image5}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    />:null}
+
+                                    {props?.image6 ? <img className="w-full" 
                                         src={`${props?.image6}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    />: null}
+
+                                    {props?.image7 ? <img className="w-full" 
                                         src={`${props?.image7}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    /> : null}
+
+                                    {props?.image8 ? <img className="w-full" 
                                         src={`${props?.image8}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    />: null}
+
+                                    {props?.image9 ? <img className="w-full" 
                                         src={`${props?.image9}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    />: null}
+                                    {props?.image10 ? <img className="w-full" 
                                         src={`${props?.image10}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    />: null}
+                                    {props?.image11 ? <img className="w-full" 
                                         src={`${props?.image11}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    />: null}
+                                    {props?.image12 ? <img className="w-full" 
                                         src={`${props?.image12}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    />:null}
+                                    
+                                    {props?.image13 ? <img className="w-full" 
                                         src={`${props?.image13}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    />:null}
+                                    {props?.image14 ? <img className="w-full" 
                                         src={`${props?.image14}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    />: null}
+                                    {props?.image15 ? <img className="w-full" 
                                         src={`${props?.image15}`}
                                         alt=""
-                                    />
-                                    <img className="w-full" 
+                                    />: null}
+                                    {props?.image16 ? <img className="w-full" 
                                         src={`${props?.image16}`}
                                         alt=""
-                                    />
+                                    />: null}
                                 </div>
                             </div>
                             <div className="flex fixed flex-col w-fit h-fit top-[80%] left-[82%] md:left-[86%]">

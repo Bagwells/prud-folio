@@ -66,12 +66,12 @@ const CardItemMobile =(props:Card)=> {
                             <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-[8px] sm:text-xs`}>
                                 {props?.subtitle2}
                             </div>
-                            <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-[8px] sm:text-xs`}>
+                            {props?.subtitle3 ? <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-[8px] sm:text-xs`}>
                                 {props?.subtitle3}
-                            </div>
-                            <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-[8px] sm:text-xs`}>
+                            </div>: null}
+                            {props?.subtitle4 ? <div className={`${textEffect} inline-flex items-center bg-textback p-2 rounded-[5px] h-[20px] font-poppins font-normal text-skyblue text-[8px] sm:text-xs`}>
                                 {props?.subtitle4}
-                            </div>
+                            </div>: null}
                         </div>
                     </div>
                 </Link>

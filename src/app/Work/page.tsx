@@ -146,7 +146,7 @@ const WorkPage = () => {
                                 </Tab>
                             </Tab.List> 
                             <Tab.Panels className="lg:ml-12 h-full gap-4 pb-4 lg:pb-0 sm:px-3.5">
-                                <div className="lg:hidden inline-flex w-fit font-normal font-poppins text-base text-white mb-2">
+                                <div className="lg:hidden inline-flex w-fit font-normal font-poppins text-sm md:text-base text-white mb-2">
                                     I have made a few things, here are some of my favorite's
                                 </div>
                                 <Tab.Panel>
@@ -229,7 +229,7 @@ const WorkPage = () => {
                                 </Tab.Panel>
                             </Tab.Panels>
                         </Tab.Group>
-                        <div className="flex fixed flex-col w-fit h-fit top-[78%] left-[86%] z-50">
+                        <div className="flex fixed flex-col w-fit h-fit top-[78%] left-[81%] md:left-[86%] z-50">
                             <Link href="#main" onClick={scrollToTop}
                                 className={`flex items-center justify-center w-[53px] h-[52px] rounded-full py-2.5 px-4 bg-[#0C0D0F]`}>
                                     <FaArrowUpLong className="text-skyblue text-2xl"/> 
