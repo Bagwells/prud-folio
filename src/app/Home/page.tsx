@@ -126,10 +126,8 @@ export default function HomePage() {
             <div className="flex flex-col pl-8 md:pl-12 lg:pl-0 lg:flex-row w-full lg:gap-10">
                 <div className={`flex flex-col pt-5 lg:w-[75%] lg:pl-14 gap-[36px] ${swipeLeft} ${swipeLeftRev} duration-300`}>
                     <div className="flex flex-col lg:flex-row">
-                        <Image  
+                        <img className="w-[224px] h-[250px]"
                             src="/Profile.png" alt=""
-                            width={224}
-                            height={250}
                         />
                         <div className="inline-flex my-2 font-poppins font-bold text-Gray text-5xl md:text-6xl xl:text-[80px] mix-blend-screen opacity-20">
                             HELLO
