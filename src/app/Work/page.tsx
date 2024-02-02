@@ -159,7 +159,7 @@ const WorkPage = () => {
                                                 link="/PlughMobile"
                                                 buttonclick={toggle} subtitle={"Logo"} subtitle2={"UIUX Design"} subtitle3={"Social"} subtitle4={"Mobile"}/>
                                             <CardItemMobile
-                                                picture="/Componentgrid.svg"
+                                                picture="/Componentgrid.png"
                                                 title="Components & Cards"
                                                 description="Snapshot of admin dashboard and components"
                                                 link="/Components-card"

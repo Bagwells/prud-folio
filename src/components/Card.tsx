@@ -35,7 +35,7 @@ const CardItemMobile =(props:Card)=> {
     useEffect(()=>{
         setTimeout(()=> {
             setLoad(true);
-        },500)
+        },1000)
     },[])
 
 
