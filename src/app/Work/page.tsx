@@ -153,7 +153,7 @@ const WorkPage = () => {
                                     <div className="flex flex-col w-full lg:h-[450px] items-center overflow-hidden">
                                         <div id="scroll" className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px] overflow-y-auto">
                                             <CardItemMobile 
-                                                picture="/Plugh.svg"
+                                                picture="/Plugh.png"
                                                 title="Plugh Mobile App"
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/PlughMobile"
