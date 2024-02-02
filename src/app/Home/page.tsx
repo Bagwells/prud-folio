@@ -127,7 +127,7 @@ export default function HomePage() {
                 <div className={`flex flex-col pt-5 lg:w-[75%] lg:pl-14 gap-[36px] ${swipeLeft} ${swipeLeftRev} duration-300`}>
                     <div className="flex flex-col lg:flex-row">
                         <Image  
-                            src="/Profile.svg" alt=""
+                            src="/Profile.png" alt=""
                             width={224}
                             height={250}
                         />

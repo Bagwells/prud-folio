@@ -181,15 +181,15 @@ const WorkOverview =(props:any)=> {
                                         alt=""
                                     />
 
-                                    <img className="w-full" 
+                                    {props?.image3 ? <img className="w-full" 
                                         src={`${props?.image3}`}
                                         alt=""
-                                    />
+                                    />: null}
 
-                                    <img className="w-full" 
+                                    {props?.image4 ? <img className="w-full" 
                                         src={`${props?.image4}`}
                                         alt=""
-                                    />
+                                    />: null}
                                     {props?.image5 ? <img className="w-full" 
                                         src={`${props?.image5}`}
                                         alt=""
