@@ -10,7 +10,7 @@ const Velion =()=> {
             subtitle2="UIUX Design"
             subtitle3=""
             subtitle4=""
-            image1="/Velion1.png"  image2="/Velion2.png"  image3="/Velion3.png" image4="/Velion4.png" 
+            image1="/Velion1.png"  image2="/Velion2.png"  image3="/Velion3.png" image4="/Velion4.jpg" 
             image5="/Velion5.png" image6="/Velion6.png" image7=""   image8=""
         />
     )
