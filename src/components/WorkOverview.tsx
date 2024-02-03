@@ -168,7 +168,7 @@ const WorkOverview =(props:any)=> {
                                     </div>
                                 </div>
                                 <div className={`${LoadEffect} h-[600px] w-full items-center justify-center transition-all ease-out`}>
-                                    <RiLoader2Line className="animation-spin text-2xl text-skyblue"/>
+                                    <RiLoader2Line className="animation-spin animate-pulse text-2xl text-skyblue"/>
                                 </div>
                                 <div className={`${loadImage} w-full grid-cols-1 gap-[22px] transition-all ease-in`}>
                                     <img className="w-full" 

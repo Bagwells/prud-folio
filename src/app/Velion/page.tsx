@@ -1,6 +1,6 @@
 import WorkOverview from "@/components/WorkOverview";
 
-const Velion =()=>{
+const Velion =()=> {
     
     return(
         <WorkOverview 
