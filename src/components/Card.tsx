@@ -46,7 +46,7 @@ const CardItemMobile =(props:Card)=> {
                 className={`block max-w-[408px] h-fit z-10 ${effect}`}>
                 <Link href={`${props?.link}`}>
                     <div className={`${LoadEffect} h-[215px] w-full items-center justify-center transition-all ease-out`}>
-                        <RiLoader2Line className="animation-spin text-2xl"/>
+                        <RiLoader2Line className="animation-spin animate-pulse text-2xl"/>
                     </div>
                     <img src={`${props?.picture}`}
                         className={`${loadImage} w-full`}
