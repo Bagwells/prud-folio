@@ -11,10 +11,10 @@ import WorkOverview
             subtitle2="Branding"
             subtitle3="Humanity"
             subtitle4=""
-            image1="/ourcontinent.svg"  image2="/ourcontinent2.svg"  image3="/ourcontinent3.svg" image4="/ourcontinent4.svg" 
-            image5="/ourcontinent5.svg" image6="/ourcontinent6.svg" image7="/ourcontinent7.svg"   image8="/ourcontinent8.svg"
-            image9="/ourcontinent9.svg" image10="/ourcontinentx.svg" image11="/ourcontinentxi.svg" image12="/ourcontinentxii.svg"
-            image13="/ourcontinentxii.svg" image14="/ourcontinentxiv.svg" image15="/ourcontinentxv.svg" image16=""
+            image1="/ourcontinent1.png"  image2="/ourcontinent2.png"  image3="/ourcontinent3.png" image4="/ourcontinent4.png" 
+            image5="/ourcontinent5.png" image6="/ourcontinent6.png" image7="/ourcontinent7.png"   image8="/ourcontinent8.png"
+            image9="/ourcontinent9.png" image10="/ourcontinentx.png" image11="/ourcontinentxi.png" image12="/ourcontinentxii.png"
+            image13="/ourcontinentxii.png" image14="/ourcontinentxiv.png" image15="/ourcontinentxv.png" image16="ourcontinentxvi.png"
         />
     )
 };

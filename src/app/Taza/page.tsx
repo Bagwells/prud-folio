@@ -11,10 +11,10 @@ import WorkOverview
             subtitle2="Branding"
             subtitle3="Wears"
             subtitle4=""
-            image1="/Taza-1.svg"  image2="/Taza-2.svg"  image3="/Taza-3.svg" image4="/Taza-4.svg" 
-            image5="/Taza-5.svg" image6="/Taza-6.svg" image7="/Taza-7.svg"   image8="/Taza-8.svg"
-            image9="/Taza-9.svg" image10="/Taza-x.svg" image11="/Taza-xi.svg" image12="/Taza-xii.svg"
-            image13="/Taza-xiii.svg" image14="/Taza-xiv.svg" image15="/Taza-xv.svg" image16="/Taza-xvi.svg"
+            image1="/Taza-1.png"  image2="/Taza-2.png"  image3="/Taza-3.png" image4="/Taza-4.png" 
+            image5="/Taza-5.png" image6="/Taza-6.png" image7="/Taza-7.png"   image8="/Taza-8.png"
+            image9="/Taza-9.png" image10="/Taza-x.png" image11="/Taza-xi.png" image12="/Taza-xii.png"
+            image13="/Taza-xiii.png" image14="/Taza-xiv.png" image15="/Taza-xv.png" image16="/Taza-xvi.png"
         />
     )
 };

@@ -123,7 +123,8 @@ const AboutPage = ()=> {
                             </div>
                             <div className="flex flex-col items-center gap-4">
                                 <div className="flex flex-col relative gap-4">
-                                    <img className="w-[236px] md:w-[468px]" src="/Aboutme.svg" alt=""/>
+                                    
+                                    <img className="w-[236px] md:w-[468px]" src="/Aboutme.png" alt=""/>
                                     <Link href="/Contact" className="hidden lg:flex items-center justify-center w-full px-4 py-2 font-poppins font-normal 
                                         text-light text-[22px] visited:border-opacity-20 border hover:border-2 border-white"
                                     >

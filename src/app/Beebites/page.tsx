@@ -11,10 +11,10 @@ import WorkOverview
             subtitle2="Branding"
             subtitle3="Food"
             subtitle4=""
-            image1="/Beebites.svg"  image2="/Beebites-1.svg"  image3="/Beebites-2.svg" image4="/Beebites-3.svg" 
-            image5="/Beebites-4.svg" image6="/Beebites-5.svg" image7="/Beebites-6.svg"   image8="/Beebites-7.svg"
-            image9="/Beebites-8.svg" image10="/Beebites-9.svg" image11="/Beebites-x.svg" image12="/Beebites-xi.svg"
-            image13="/Beebites-xii.svg" image14="/Beebites-xiii.svg" image15="/Beebites-xiv.svg" image16=""
+            image1="/Beebites-1.png"  image2="/Beebites-2.png"  image3="/Beebites-3.png" image4="/Beebites-4.png" 
+            image5="/Beebites-5.png" image6="/Beebites-6.png" image7="/Beebites-7.png"   image8="/Beebites-8.png"
+            image9="/Beebites-9.png" image10="/Beebites-x.png" image11="/Beebites-xi.png" image12="/Beebites-xii.png"
+            image13="/Beebites-xiii.png" image14="/Beebites-xiv.png" image15="/Beebites-xv.png" image16="/Beebites-xvi.png"
         />
     )
 };

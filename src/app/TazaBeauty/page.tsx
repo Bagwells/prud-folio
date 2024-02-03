@@ -11,10 +11,10 @@ import WorkOverview
             subtitle2="Branding"
             subtitle3="Beauty"
             subtitle4=""
-            image1="/Taza-beauty-1.svg"  image2="/Taza-beauty-2.svg"  image3="/Taza-beauty-3.svg" image4="/Taza-beauty-4.svg" 
-            image5="/Taza-beauty-5.svg" image6="/Taza-beauty-6.svg" image7="/Taza-beauty-7.svg"   image8="/Taza-beauty-8.svg"
-            image9="/Taza-beauty-9.svg" image10="/Taza-beauty-x.svg" image11="/Taza-beauty-xi.svg" image12="/Taza-beauty-xii.svg"
-            image13="/Taza-beauty-xii.svg" image14="/Taza-beauty-xiv.svg" image15="/Taza-beauty-xv.svg" image16=""
+            image1="/Taza-beauty-1.png"  image2="/Taza-beauty-2.png"  image3="/Taza-beauty-3.png" image4="/Taza-beauty-4.png" 
+            image5="/Taza-beauty-5.png" image6="/Taza-beauty-6.png" image7="/Taza-beauty-7.png"   image8="/Taza-beauty-8.png"
+            image9="/Taza-beauty-9.png" image10="/Taza-beauty-x.png" image11="/Taza-beauty-xi.png" image12="/Taza-beauty-xii.png"
+            image13="/Taza-beauty-xii.png" image14="/Taza-beauty-xiv.png" image15="/Taza-beauty-xv.png" image16=""
         />
     )
 };

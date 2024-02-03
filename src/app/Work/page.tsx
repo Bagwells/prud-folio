@@ -145,7 +145,7 @@ const WorkPage = () => {
                                     Branding
                                 </Tab>
                             </Tab.List> 
-                            <Tab.Panels className="lg:ml-12 h-full gap-4 pb-4 lg:pb-0 sm:px-3.5 pt-2.5">
+                            <Tab.Panels className="lg:ml-12 h-full gap-4 pb-4 lg:pb-0 sm:px-3.5 pt-2.5 lg:pt-0">
                                 <div className="lg:hidden inline-flex w-fit font-normal font-poppins text-sm md:text-base text-white mb-2">
                                     I have made a few things, here are some of my favorite's
                                 </div>
@@ -165,25 +165,25 @@ const WorkPage = () => {
                                                 link="/Components-card"
                                                 buttonclick={toggle} subtitle={"Cards"} subtitle2={"Components"} subtitle3={"Dashboard"} subtitle4={""} />
                                              <CardItemMobile
-                                                picture="/LandingPage.svg"
+                                                picture="/LandingPage.png"
                                                 title="Plugh"
                                                 description="Connecting two people without sharing their personal details"
                                                 link="/PlughWeb"
                                                 buttonclick={toggle} subtitle={"Logo"} subtitle2={"UIUX Design"} subtitle3={""} subtitle4={""}/>
                                             <CardItemMobile 
-                                                picture="/G-M.svg"
+                                                picture="/G-M.png"
                                                 title="Google Meal"
                                                 description="A google course case study for a restaurant delivery app."
                                                 link="/GoogleMeal"
                                                 buttonclick={toggle} subtitle={"Food"} subtitle2={"UIUX Design"} subtitle3={"Mobile"} subtitle4={"Case Study"}/>
                                             <CardItemMobile
-                                                picture="/TheQue.svg"
+                                                picture="/TheQue.png"
                                                 title="The Que"
                                                 description="Create post, go live, write petitions, banter on topics that interests you and let your vote count!"
                                                 link="/TheQue"
                                                 buttonclick={toggle} subtitle={"Social"} subtitle2={"Mobile"} subtitle3={"UIUX Design"} subtitle4={""}/>
                                             <CardItemMobile
-                                                picture="/Velion.svg"
+                                                picture="/Velion.png"
                                                 title="Velion"
                                                 description="Responsive landing page for an agency, with the goal to bring innovation to business and brands."
                                                 link="/Velion"
@@ -195,31 +195,31 @@ const WorkPage = () => {
                                     <div className="flex flex-col w-full lg:h-[500px] items-center overflow-hidden">
                                         <div id="main" className="w-fit grid grid-col-1 md:grid-cols-2 gap-[18px] overflow-y-auto">
                                             <CardItemMobile 
-                                                picture="/Veliongrid.svg"
+                                                picture="/Veliongrid.png"
                                                 title="Velion"
                                                 description="A tech company that focuses on solving real world problems"
                                                 link="/VelionBrand"
                                                 buttonclick={toggle} subtitle={"Logo"} subtitle2={"Branding"} subtitle3={"Brand Guide"} subtitle4={"Agency"}/>
                                              <CardItemMobile
-                                                picture="/Tazagrid.svg"
+                                                picture="/Tazagrid.png"
                                                 title="Taza"
                                                 description="Not your regular Jewel store"
                                                 link="/Taza"
                                                 buttonclick={toggle} subtitle={"Logo"} subtitle2={"Branding"} subtitle3={"Wears"} subtitle4={""}/>
                                             <CardItemMobile 
-                                                picture="/Taza-beautygrid.svg"
+                                                picture="/Taza-beautygrid.png"
                                                 title="Taza Beauty"
                                                 description="A testament to the power of self-expression through self-care."
                                                 link="/TazaBeauty"
                                                 buttonclick={toggle} subtitle={"Logo"} subtitle2={"Branding"} subtitle3={"Beauty"} subtitle4={""}/>
                                             <CardItemMobile
-                                                picture="/ourcontinentgrid.svg"
+                                                picture="/ourcontinentgrid.png"
                                                 title="OurKontinent"
                                                 description="Bringing change and impact to African Continent"
                                                 link="/OurKontinent"
                                                 buttonclick={toggle} subtitle={"Logo"} subtitle2={"Branding"} subtitle3={"Humanity"} subtitle4={""}/>
                                             <CardItemMobile
-                                                picture="/Beebitesgrid.svg"
+                                                picture="/Beebitesgrid.png"
                                                 title="Beebites"
                                                 description="The Goodness in every bite"
                                                 link="/Beebites"

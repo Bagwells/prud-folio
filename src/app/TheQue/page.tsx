@@ -10,8 +10,8 @@ const TheQue =()=>{
             subtitle2="Mobile"
             subtitle3="UIUX Design"
             subtitle4=""
-            image1="/TheQue.svg"  image2="/TheQue2.svg"  image3="/TheQue3.svg" image4="/TheQue4.svg" 
-            image5="/TheQue5.svg" image6="/TheQue6.svg" image7="/TheQue7.svg"   image8=""
+            image1="/TheQue.png"  image2="/TheQue2.png"  image3="/TheQue3.png" image4="/TheQue4.png" 
+            image5="/TheQue5.png" image6="/TheQue6.png" image7="/TheQue7.png"   image8=""
         />
     )
 };

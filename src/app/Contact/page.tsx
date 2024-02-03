@@ -114,7 +114,7 @@ const Contact =()=> {
                             </div>
                         </div>
                         <div className=" hidden lg:flex  w-full">
-                            <img className="w-[500px]" src="/Aboutme.svg" alt=""/>
+                            <img className="w-[500px]" src="/Aboutme.png" alt=""/>
                         </div>
                         <div className="flex flex-col w-full items-start mt-10 gap-10">
                             <div className="hidden lg:inline-flex w-fit font-Sofia font-bold text-white text-[76px]">

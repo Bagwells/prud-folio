@@ -1,7 +1,7 @@
 import WorkOverview
  from "@/components/WorkOverview";
 
- const VelionBrand =()=>{
+ const VelionBrand =()=> {
     
     return(
         <WorkOverview 
@@ -11,10 +11,10 @@ import WorkOverview
             subtitle2="Branding"
             subtitle3="Brand Guide"
             subtitle4="Agency"
-            image1="/VelionBrand-1.svg"  image2="/VelionBrand-2.svg"  image3="/VelionBrand-3.svg" image4="/VelionBrand-4.svg" 
-            image5="/VelionBrand-5.svg" image6="/VelionBrand-6.svg" image7="/VelionBrand-7.svg"   image8="/VelionBrand-8.svg"
-            image9="/VelionBrand-9.svg" image10="/VelionBrand-x.svg" image11="/VelionBrand-xi.svg" image12="/VelionBrand-xii.svg"
-            image13="/VelionBrand-xiii.svg"
+            image1="/VelionBrand-1.png"  image2="/VelionBrand-2.png"  image3="/VelionBrand-3.png" image4="/VelionBrand-4.png" 
+            image5="/VelionBrand-5.png" image6="/VelionBrand-6.png" image7="/VelionBrand-7.png"   image8="/VelionBrand-8.png"
+            image9="/VelionBrand-9.png" image10="/VelionBrand-x.png" image11="/VelionBrand-xi.png" image12="/VelionBrand-xii.png"
+            image13="/VelionBrand-xiii.png"
         />
     )
 };

@@ -10,8 +10,8 @@ const Velion =()=>{
             subtitle2="UIUX Design"
             subtitle3=""
             subtitle4=""
-            image1="/Velion.svg"  image2="/Velion2.svg"  image3="/Velion3.svg" image4="/Velion4.svg" 
-            image5="/Velion5.svg" image6="" image7=""   image8=""
+            image1="/Velion1.png"  image2="/Velion2.png"  image3="/Velion3.png" image4="/Velion4.png" 
+            image5="/Velion5.png" image6="/Velion6.png" image7=""   image8=""
         />
     )
 };
