@@ -105,7 +105,7 @@ const Contact =()=> {
                         <div className="lg:inline-flex hidden w-fit h-fit font-poppins font-bold text-skyblue text-[40px]">
                             Contact
                         </div>
-                        <div className="relative flex flex-col bg-[url('/Aboutme.svg')] bg-cover items-start lg:hidden max-w-[420px] h-[400px]">
+                        <div className="relative flex flex-col bg-[url('/Aboutme.png')] bg-cover items-start lg:hidden max-w-[420px] h-[400px]">
                             <div className="inline-flex w-fit font-poppins font-bold text-skyblue text-[40px]">
                                 Contact
                             </div>
